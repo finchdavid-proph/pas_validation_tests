@@ -20,6 +20,8 @@ class SubgraphConfig(ConfigBase):
             map: bool=True,
             sha256: bool=True,
             mask: bool=True,
+            bronze_sha256_columns: list=[],
+            silver_sha256_columns: list=[],
             prophecy_project_config=None,
             **kwargs
     ):
@@ -38,6 +40,8 @@ class SubgraphConfig(ConfigBase):
         self.map = map
         self.sha256 = sha256
         self.mask = mask
+        self.bronze_sha256_columns = bronze_sha256_columns
+        self.silver_sha256_columns = silver_sha256_columns
         pass
 
     def update(self, updated_config):
@@ -55,6 +59,8 @@ class SubgraphConfig(ConfigBase):
         self.map = updated_config.map
         self.sha256 = updated_config.sha256
         self.mask = updated_config.mask
+        self.bronze_sha256_columns = updated_config.bronze_sha256_columns
+        self.silver_sha256_columns = updated_config.silver_sha256_columns
         self.update_project_config_fields(updated_config)
         pass
 

@@ -1,4 +1,4 @@
-from .silver_parse_columns import silver_parse_columns
+from .rename_column_silver import rename_column_silver
 from .silver_get_columns import silver_get_columns
 from .bronze_get_columns import bronze_get_columns
 from .join_bronze_silver_columns import join_bronze_silver_columns
@@ -8,7 +8,7 @@ from .source_silver_table import source_silver_table
 from .compile_keep_rule import compile_keep_rule
 from .bronze_distinct_counts import bronze_distinct_counts
 from .inner_join_columns_bronze_counts import inner_join_columns_bronze_counts
-from .bronze_parse_columns import bronze_parse_columns
+from .rename_column_to_bronze_format import rename_column_to_bronze_format
 from .source_bronze_table import source_bronze_table
 from .join_columns_counts import join_columns_counts
 from .config import *

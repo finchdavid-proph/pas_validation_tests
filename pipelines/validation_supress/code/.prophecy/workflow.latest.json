@@ -401,7 +401,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -410,7 +410,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                "description" : "Table name in the bronze data layer; Contains the raw data records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -455,7 +455,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path to the silver layer where the data is stored.",
+                "description" : "Path in the silver layer where the data is stored.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -486,7 +486,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the data should be suppressed in the dataset.",
+                "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -495,7 +495,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag to determine if mapping is applied to the dataset.",
+                "description" : "Indicates if the dataset should be mapped to another format or structure.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -504,7 +504,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -513,7 +513,33 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag to determine if data masking is applied for privacy.",
+                "description" : "Indicates if data masking is applied to protect sensitive information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -575,7 +601,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -584,7 +610,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                "description" : "Table name in the bronze data layer; Contains the raw data records.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -629,7 +655,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path to the silver layer where the data is stored.",
+                "description" : "Path in the silver layer where the data is stored.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -660,7 +686,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the data should be suppressed in the dataset.",
+                "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -669,7 +695,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag to determine if mapping is applied to the dataset.",
+                "description" : "Indicates if the dataset should be mapped to another format or structure.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -678,7 +704,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -687,7 +713,33 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Flag to determine if data masking is applied for privacy.",
+                "description" : "Indicates if data masking is applied to protect sensitive information.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -762,12 +814,6 @@
           "isHidden" : true
         }
       }, {
-        "id" : "li_kp9s7ZCe3Gm1N_xgYl",
-        "source" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
-        "sourcePort" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
-        "target" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
-        "targetPort" : "7Ajkux-xQjJFxDObN6-M-$$HZH3dQhUyRGCj12cSr4CJ"
-      }, {
         "id" : "GnixTXsTvzI4UB60rD4f0",
         "source" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
         "sourcePort" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
@@ -779,18 +825,6 @@
         "sourcePort" : "c0-sltVEtBdiO5cF5f7KC$$l0qaJd7RDjKHKP3H463Eh",
         "target" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
         "targetPort" : "XkHE1056QFieJACxjSGZ6$$oZ5c_QCjGxoMVMZiUiWu6"
-      }, {
-        "id" : "csuI4mxIY96-s82pYM0fN",
-        "source" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
-        "sourcePort" : "0GuwFzpz88AnhRkCIaJO8$$lnM92ofejFleXc69iG-qW",
-        "target" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
-        "targetPort" : "JG1aTmiQ3gJnuq2p_QpYO$$P6tn_Zi_55ABNisTStjAh"
-      }, {
-        "id" : "kcBbtnBNuPsokoMO0rMqU",
-        "source" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
-        "sourcePort" : "L0-5GMWJhgE-DhCSI2iWL$$HpoY-G8PnGANR0pHFLgP7",
-        "target" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
-        "targetPort" : "1UbE8no_qodqNv1ff6_Yb$$uXjhDfO56yjgLIvapjbP4"
       }, {
         "id" : "tjbKTav07NXFS5LRzFshX",
         "source" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
@@ -804,25 +838,89 @@
         "target" : "JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD",
         "targetPort" : "1le6dO8nxp5f3xqNNeHFN$$iHA_DMwVSUjJfOylj5zrB"
       }, {
-        "id" : "XvRmHtzNGFNceDcrwkkPT",
+        "id" : "-ZfepqvXFJ0lXrLgpLm_e$$H8kFePzPCOJZyFQJlEp-9",
+        "source" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
+        "sourcePort" : "L0-5GMWJhgE-DhCSI2iWL$$HpoY-G8PnGANR0pHFLgP7",
+        "target" : "cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ",
+        "targetPort" : "B5R7czqsIL9-zo4hBdASR$$nkx19F0SFGLbG5Gd_IQ3f"
+      }, {
+        "id" : "c7zIPO_YxhjjqUHGET_Xn",
+        "source" : "cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ",
+        "sourcePort" : "MQsjqnyOGNUsOi3LeOMQg$$CzzmYOx4X6F1T-jSPGSED",
+        "target" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+        "targetPort" : "Y21GID2wlMh1542ybFVfu$$2zurpJmwc2jskZfZL5AbZ"
+      }, {
+        "id" : "g5_VTqFdRmDWwPHaCrbvM$$vZx3aTMEHRegB5DmNrbiK",
+        "source" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
+        "sourcePort" : "0GuwFzpz88AnhRkCIaJO8$$lnM92ofejFleXc69iG-qW",
+        "target" : "ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc",
+        "targetPort" : "1-o7kJM_a2p2bOtQ8aRfl$$eW_-iPZFlgOetpNwrCdCe"
+      }, {
+        "id" : "zFWD43B2iVD2DN1pF6NL8",
+        "source" : "ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc",
+        "sourcePort" : "GEhXhY0Vb4PISR7EKYSZZ$$tMrPOW-hjROAp6VndJ2sQ",
+        "target" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+        "targetPort" : "0l64dxVH8khCbPcPOOwKr$$EYhmUKsT9-oSJ-Ar2SvcH"
+      }, {
+        "id" : "-0qm8VrI0hQrj4_zmYc5g",
+        "source" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
+        "sourcePort" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
+        "target" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
+        "targetPort" : "7Ajkux-xQjJFxDObN6-M-$$HZH3dQhUyRGCj12cSr4CJ"
+      }, {
+        "id" : "uI-QTMxao9D5BtdXa8PyJ$$bI8tR4JqW7oqQdSpjbArQ",
         "source" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
         "sourcePort" : "5vIj1JspNGgD3ze5YilzF$$T80Z5lhb3x8UPk09NJTc9",
         "target" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
         "targetPort" : "NeTdPw6IZvZIvUkpZioWF$$Ana5Xclre5A84CRN93Gcw"
-      }, {
-        "id" : "jrLVTS7stdew0ck0t2GYB",
-        "source" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
-        "sourcePort" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
-        "target" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
-        "targetPort" : "Y21GID2wlMh1542ybFVfu$$2zurpJmwc2jskZfZL5AbZ"
-      }, {
-        "id" : "yPL6zBQbcVrNPYoa3Q1vW",
-        "source" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
-        "sourcePort" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
-        "target" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
-        "targetPort" : "0l64dxVH8khCbPcPOOwKr$$EYhmUKsT9-oSJ-Ar2SvcH"
       } ],
       "processes" : {
+        "cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ" : {
+          "id" : "cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "rename_column_to_bronze_format",
+            "slug" : "rename_column_to_bronze_format",
+            "x" : 520,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "B5R7czqsIL9-zo4hBdASR$$nkx19F0SFGLbG5Gd_IQ3f",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "MQsjqnyOGNUsOi3LeOMQg$$CzzmYOx4X6F1T-jSPGSED",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "bronze_col_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "col_name"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
         "ig09Ddyg_5NrT2WSv74ea$$WqQeKSEIruEMXEe-T9mMG" : {
           "id" : "ig09Ddyg_5NrT2WSv74ea$$WqQeKSEIruEMXEe-T9mMG",
           "component" : "ControlFlowInput",
@@ -859,7 +957,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                    "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -868,7 +966,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                    "description" : "Table name in the bronze data layer; Contains the raw data records.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -913,7 +1011,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Path to the silver layer where the data is stored.",
+                    "description" : "Path in the silver layer where the data is stored.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -944,7 +1042,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates whether the data should be suppressed in the dataset.",
+                    "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -953,7 +1051,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag to determine if mapping is applied to the dataset.",
+                    "description" : "Indicates if the dataset should be mapped to another format or structure.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -962,7 +1060,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                    "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -971,7 +1069,33 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Flag to determine if data masking is applied for privacy.",
+                    "description" : "Indicates if data masking is applied to protect sensitive information.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_sha256_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_sha256_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -1258,6 +1382,52 @@
             "projectName" : "ProphecySparkBasicsPython"
           }
         },
+        "ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc" : {
+          "id" : "ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "rename_column_silver",
+            "slug" : "rename_column_silver",
+            "x" : 520,
+            "y" : 520,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "1-o7kJM_a2p2bOtQ8aRfl$$eW_-iPZFlgOetpNwrCdCe",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "GEhXhY0Vb4PISR7EKYSZZ$$tMrPOW-hjROAp6VndJ2sQ",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "silver_col_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "col_name"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
         "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW" : {
           "id" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
           "component" : "SQLStatement",
@@ -1333,7 +1503,7 @@
             "label" : "extract_suppressed_columns_1",
             "slug" : "extract_suppressed_columns_1",
             "x" : 520,
-            "y" : 120,
+            "y" : 140,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1505,88 +1675,6 @@
           "properties" : {
             "datasetId" : "datasets/source_silver_supress"
           }
-        },
-        "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS" : {
-          "id" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
-          "component" : "SQLStatement",
-          "metadata" : {
-            "label" : "silver_parse_columns",
-            "slug" : "silver_parse_columns",
-            "x" : 520,
-            "y" : 520,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false,
-            "dataPreview" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "JG1aTmiQ3gJnuq2p_QpYO$$P6tn_Zi_55ABNisTStjAh",
-              "slug" : "in0"
-            } ],
-            "outputs" : [ {
-              "id" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "fileTabs" : [ {
-              "path" : "out",
-              "id" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
-              "language" : "sql",
-              "content" : "SELECT col_name AS silver_col_name FROM in0"
-            } ],
-            "inputPortNames" : [ "in0" ]
-          },
-          "componentInfo" : {
-            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
-            "projectName" : "ProphecySparkBasicsPython"
-          }
-        },
-        "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze" : {
-          "id" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
-          "component" : "SQLStatement",
-          "metadata" : {
-            "label" : "bronze_parse_columns",
-            "slug" : "bronze_parse_columns",
-            "x" : 520,
-            "y" : 320,
-            "phase" : 0,
-            "cache" : false,
-            "detailedStats" : false,
-            "isImported" : false,
-            "dataPreview" : false
-          },
-          "ports" : {
-            "inputs" : [ {
-              "id" : "1UbE8no_qodqNv1ff6_Yb$$uXjhDfO56yjgLIvapjbP4",
-              "slug" : "in0"
-            } ],
-            "outputs" : [ {
-              "id" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
-              "slug" : "out"
-            } ],
-            "selectedInputFields" : [ ],
-            "isCustomOutputSchema" : false,
-            "autoUpdateOnRun" : false
-          },
-          "properties" : {
-            "fileTabs" : [ {
-              "path" : "out",
-              "id" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
-              "language" : "sql",
-              "content" : "SELECT col_name AS bronze_col_name FROM in0"
-            } ],
-            "inputPortNames" : [ "in0" ]
-          },
-          "componentInfo" : {
-            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
-            "projectName" : "ProphecySparkBasicsPython"
-          }
         }
       },
       "componentInfo" : {
@@ -1635,22 +1723,6 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
     "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
     "range" : {
       "start" : {
@@ -1667,7 +1739,39 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.cfAMJG15hfUWsBnrVFnNn$$7cThq7lD94JrLNWPtBJwZ.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column col_name",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
     "range" : {
       "start" : {
         "line" : 0,
@@ -1711,7 +1815,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1727,7 +1831,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.bronze_col_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1779,7 +1883,7 @@
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
-    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc",
     "range" : {
       "start" : {
         "line" : 0,
@@ -1792,6 +1896,22 @@
     },
     "severity" : 2,
     "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.ferWVJhqazBpMODk5AVgt$$6fKKZ22QWDYr8dR8Wz2jc.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column col_name",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1887,7 +2007,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column silver_exists [Expressions]",
+    "message" : "No match found for column bronze_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1903,7 +2023,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists [Expressions]",
+    "message" : "No match found for column silver_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

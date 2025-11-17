@@ -15,16 +15,16 @@ class iterator_validation_keep(MetaGemExec):
 
     def execute(self, spark: SparkSession, subgraph_config: SubgraphConfig) -> List[DataFrame]:
         Config.update(subgraph_config)
-        df_source_bronze_table = source_bronze_table(spark)
-        df_bronze_get_columns = bronze_get_columns(spark, df_source_bronze_table)
-        df_bronze_parse_columns = bronze_parse_columns(spark, df_bronze_get_columns)
         df_source_silver_table = source_silver_table(spark)
         df_silver_get_columns = silver_get_columns(spark, df_source_silver_table)
-        df_silver_parse_columns = silver_parse_columns(spark, df_silver_get_columns)
+        df_rename_column_silver = rename_column_silver(spark, df_silver_get_columns)
+        df_source_bronze_table = source_bronze_table(spark)
+        df_bronze_get_columns = bronze_get_columns(spark, df_source_bronze_table)
+        df_rename_column_to_bronze_format = rename_column_to_bronze_format(spark, df_bronze_get_columns)
         df_join_bronze_silver_columns = join_bronze_silver_columns(
             spark, 
-            df_bronze_parse_columns, 
-            df_silver_parse_columns
+            df_rename_column_to_bronze_format, 
+            df_rename_column_silver
         )
         df_bronze_distinct_counts = bronze_distinct_counts(spark, df_source_bronze_table, df_bronze_get_columns)
         df_inner_join_columns_bronze_counts = inner_join_columns_bronze_counts(

@@ -14,15 +14,15 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Schema name within the bronze data layer; Organizes tables in the
-        raw data storage.
+      description: Schema name within the bronze data layer; Organizes the raw data
+        into specific categories.
       mappings: []
       tags: []
   - name: bronze_table
     type: string
     nullable: true
     metadata:
-      description: Table name in the bronze data layer; Contains raw data before processing.
+      description: Table name in the bronze data layer; Contains the raw data records.
       mappings: []
       tags: []
   - name: bronze_path
@@ -59,7 +59,7 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Path to the silver layer where the data is stored.
+      description: Path in the silver layer where the data is stored.
       mappings: []
       tags: []
   - name: suppress_columns
@@ -83,27 +83,51 @@ schema:
     type: boolean
     nullable: true
     metadata:
-      description: Indicates whether the data should be suppressed in the dataset.
+      description: Indicates if certain columns should be hidden or not included in
+        the dataset.
       mappings: []
       tags: []
   - name: map
     type: boolean
     nullable: true
     metadata:
-      description: Flag to determine if mapping is applied to the dataset.
+      description: Indicates if the dataset should be mapped to another format or
+        structure.
       mappings: []
       tags: []
   - name: sha256
     type: boolean
     nullable: true
     metadata:
-      description: Indicates if SHA-256 hashing is applied to the data for security.
+      description: Indicates if SHA-256 hashing is applied to the dataset for security.
       mappings: []
       tags: []
   - name: mask
     type: boolean
     nullable: true
     metadata:
-      description: Flag to determine if data masking is applied for privacy.
+      description: Indicates if data masking is applied to protect sensitive information.
+      mappings: []
+      tags: []
+  - name: bronze_sha256_columns
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+    metadata:
+      description: List of column names in the bronze dataset that are subject to
+        SHA-256 hashing.
+      mappings: []
+      tags: []
+  - name: silver_sha256_columns
+    type:
+      type: array
+      elementType: string
+      containsNull: true
+    nullable: true
+    metadata:
+      description: List of hashed column names in the silver dataset; Contains hashed
+        versions of sensitive data columns.
       mappings: []
       tags: []

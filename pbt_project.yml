@@ -41,6 +41,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/mapping_table
+      - datasets/source_bronze_sha256
+      - datasets/source_silver_sha256
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -156,6 +158,32 @@ datasets:
         description: ''
         author: finch.david@prophecy.io
         createdAt: '2025-11-17 09:01:22'
+  datasets/source_bronze_sha256:
+    name: source_bronze_sha256
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 10:17:09'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 10:17:09'
+  datasets/source_silver_sha256:
+    name: source_silver_sha256
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 10:18:06'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 10:18:06'
 templates: {}
 jobs: {}
 gemContainer:
