@@ -1,0 +1,5 @@
+{
+  "mapping_catalog" : "dfinch",
+  "mapping_schema" : "pad",
+  "mapping_table" : "table_mappings"
+}

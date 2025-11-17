@@ -4,9 +4,10 @@ from pyspark.sql.types import *
 from validation_keep.config.ConfigStore import *
 from validation_keep.functions import *
 from prophecy.utils import *
+from validation_keep.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_mapping_table = mapping_table(spark)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_keep").getOrCreate()

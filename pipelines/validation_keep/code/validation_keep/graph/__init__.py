@@ -1,0 +1,1 @@
+from .mapping_table import mapping_table

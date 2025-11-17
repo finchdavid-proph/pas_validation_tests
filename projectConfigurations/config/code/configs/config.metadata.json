@@ -1,0 +1,25 @@
+{
+  "type" : "record",
+  "fields" : [ {
+    "name" : "mapping_catalog",
+    "kind" : {
+      "type" : "string",
+      "value" : "dfinch"
+    },
+    "optional" : false
+  }, {
+    "name" : "mapping_schema",
+    "kind" : {
+      "type" : "string",
+      "value" : "pad"
+    },
+    "optional" : false
+  }, {
+    "name" : "mapping_table",
+    "kind" : {
+      "type" : "string",
+      "value" : "table_mappings"
+    },
+    "optional" : false
+  } ]
+}

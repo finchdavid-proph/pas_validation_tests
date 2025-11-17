@@ -51,7 +51,8 @@ pipelines:
     language: python
     createdAt: '2025-11-17 07:03:20'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/mapping_table
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -81,7 +82,20 @@ pipelines:
       outputs: []
     subgraphs: []
     dependencies: {}
-datasets: {}
+datasets:
+  datasets/mapping_table:
+    name: mapping_table
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 07:18:13'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 07:18:13'
 templates: {}
 jobs: {}
 gemContainer:
@@ -144,4 +158,9 @@ projectDependencies:
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
-projectConfigurations: {}
+projectConfigurations:
+  projectConfigurations/config:
+    name: config
+    description: null
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 07:19:44'

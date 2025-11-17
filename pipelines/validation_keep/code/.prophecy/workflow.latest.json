@@ -12,6 +12,7 @@
         "pyPiVersion" : "2.1.4"
       },
       "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
       "workflowMode" : "batch"
     },
     "id" : "1",
@@ -42,7 +43,37 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "mapping_catalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_schema",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "table_mappings"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -52,7 +83,43 @@
       "instances" : { },
       "selected" : "default",
       "nonEditable" : [ ],
-      "isSubscribedPipelineWithPipelineConfigs" : false
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "mapping_catalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_schema",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "table_mappings"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : { }
+        }
+      }
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",
@@ -87,12 +154,57 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ ],
-  "processes" : { },
+  "processes" : {
+    "6B8io2TtqMtOvuQAkCmB9$$uhTD-n3Xx0JS3dDh6h6hw" : {
+      "id" : "6B8io2TtqMtOvuQAkCmB9$$uhTD-n3Xx0JS3dDh6h6hw",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "mapping_table",
+        "slug" : "mapping_table",
+        "x" : -560,
+        "y" : -280,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "zLjk1Ax7Ri8Da_FvaSyiF$$CCAQIiF8nPOr_h3d-OSvz",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/mapping_table"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.6B8io2TtqMtOvuQAkCmB9$$uhTD-n3Xx0JS3dDh6h6hw.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }
