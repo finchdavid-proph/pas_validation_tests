@@ -28,13 +28,43 @@
       "optional" : false,
       "isWorkflowNodeConfiguration" : false,
       "isReferenced" : false
+    }, {
+      "name" : "val_map_cat",
+      "kind" : {
+        "type" : "string",
+        "value" : "dfinch"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    }, {
+      "name" : "val_map_sch",
+      "kind" : {
+        "type" : "string",
+        "value" : "pad"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
+    }, {
+      "name" : "val_map_table",
+      "kind" : {
+        "type" : "string",
+        "value" : "validation_mapping"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
     } ]
   },
   "instances" : {
     "default" : {
       "mapping_catalog" : "dfinch",
       "mapping_schema" : "pad",
-      "mapping_table" : "table_mappings"
+      "mapping_table" : "table_mappings",
+      "val_map_cat" : "dfinch",
+      "val_map_sch" : "pad",
+      "val_map_table" : "validation_mapping"
     }
   }
 }

@@ -74,6 +74,36 @@
           "isReferenced" : false,
           "isProjectConfig" : true
         }, {
+          "name" : "val_map_cat",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_sch",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_mapping"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
           "name" : "iterator_validation_supress",
           "kind" : {
             "type" : "record",
@@ -102,6 +132,36 @@
               "kind" : {
                 "type" : "string",
                 "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_cat",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_sch",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_mapping"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -283,13 +343,43 @@
             "optional" : false,
             "isWorkflowNodeConfiguration" : false,
             "isReferenced" : false
+          }, {
+            "name" : "val_map_cat",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_sch",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_mapping"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
           } ]
         },
         "instances" : {
           "default" : {
             "mapping_catalog" : "dfinch",
             "mapping_schema" : "pad",
-            "mapping_table" : "table_mappings"
+            "mapping_table" : "table_mappings",
+            "val_map_cat" : "dfinch",
+            "val_map_sch" : "pad",
+            "val_map_table" : "validation_mapping"
           }
         }
       }
@@ -567,14 +657,193 @@
         } ],
         "outputs" : [ {
           "id" : "NW-oN3mL6KuyPzYxBuCAM$$kGtWIKtDifTWLKwAThTRh",
-          "slug" : "out"
+          "slug" : "out",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "bronze_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "suppress_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "keep",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "supress",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "map",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sha256",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "mask",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
+        "isCustomOutputSchema" : true,
+        "autoUpdateOnRun" : true
       },
       "properties" : {
-        "columnsSelector" : [ "Lyz1jmW8hJ9OCrr8xP-4n$$rThTAHZhXvMn08O7adtFp##supress" ],
+        "columnsSelector" : [ ],
         "condition" : {
           "format" : "sql",
           "expression" : "supress=true"
@@ -790,8 +1059,8 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
-          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
+          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk", "pk_bool" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "val_map_cat", "val_map_sch", "val_map_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
           "parallelismEnabled" : false,
@@ -1869,7 +2138,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1885,7 +2154,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.bronze_col_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1997,7 +2266,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.silver_col_name [Conditions]",
+    "message" : "No match found for column in0.bronze_column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2013,7 +2282,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.bronze_column_name [Conditions]",
+    "message" : "No match found for column in1.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

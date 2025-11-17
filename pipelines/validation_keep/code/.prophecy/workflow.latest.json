@@ -74,6 +74,36 @@
           "isReferenced" : false,
           "isProjectConfig" : true
         }, {
+          "name" : "val_map_cat",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_sch",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_mapping"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
           "name" : "iterator_validation_keep",
           "kind" : {
             "type" : "record",
@@ -102,6 +132,36 @@
               "kind" : {
                 "type" : "string",
                 "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_cat",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_sch",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_mapping"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -283,13 +343,43 @@
             "optional" : false,
             "isWorkflowNodeConfiguration" : false,
             "isReferenced" : false
+          }, {
+            "name" : "val_map_cat",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_sch",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_mapping"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
           } ]
         },
         "instances" : {
           "default" : {
             "mapping_catalog" : "dfinch",
             "mapping_schema" : "pad",
-            "mapping_table" : "table_mappings"
+            "mapping_table" : "table_mappings",
+            "val_map_cat" : "dfinch",
+            "val_map_sch" : "pad",
+            "val_map_table" : "validation_mapping"
           }
         }
       }
@@ -790,8 +880,8 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
-          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
+          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk", "pk_bool" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "val_map_cat", "val_map_sch", "val_map_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
           "parallelismEnabled" : false,
@@ -2237,7 +2327,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.bronze_col_name [Conditions]",
+    "message" : "No match found for column in1.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2253,23 +2343,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.silver_col_name [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.bK9NNmwYYJCBlNCbTfWEv$$nLNlcyoeJfZrjXKf0lRLN.properties.expressions[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column in0.bronze_col_name [Expressions]",
+    "message" : "No match found for column in0.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2286,6 +2360,22 @@
     },
     "severity" : 2,
     "message" : "No match found for column in1.silver_col_name [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.bK9NNmwYYJCBlNCbTfWEv$$nLNlcyoeJfZrjXKf0lRLN.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.bronze_col_name [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2365,7 +2455,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2381,7 +2471,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2493,7 +2583,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2509,7 +2599,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2701,38 +2791,6 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column bronze_distinct_count",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
     "message" : "No match found for column silver_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
@@ -2749,7 +2807,39 @@
       }
     },
     "severity" : 2,
+    "message" : "No match found for column bronze_exists",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
     "message" : "No match found for column silver_exists",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column bronze_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

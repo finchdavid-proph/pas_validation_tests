@@ -74,7 +74,37 @@
           "isReferenced" : false,
           "isProjectConfig" : true
         }, {
-          "name" : "iterator_validation_keep",
+          "name" : "val_map_cat",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_sch",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_mapping"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "iterator_validation_pk",
           "kind" : {
             "type" : "record",
             "fields" : [ {
@@ -102,6 +132,36 @@
               "kind" : {
                 "type" : "string",
                 "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_cat",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_sch",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_mapping"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -301,13 +361,43 @@
             "optional" : false,
             "isWorkflowNodeConfiguration" : false,
             "isReferenced" : false
+          }, {
+            "name" : "val_map_cat",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_sch",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_mapping"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
           } ]
         },
         "instances" : {
           "default" : {
             "mapping_catalog" : "dfinch",
             "mapping_schema" : "pad",
-            "mapping_table" : "table_mappings"
+            "mapping_table" : "table_mappings",
+            "val_map_cat" : "dfinch",
+            "val_map_sch" : "pad",
+            "val_map_table" : "validation_mapping"
           }
         }
       }
@@ -362,8 +452,8 @@
       "id" : "dRrpEi20WDOvotmj0D9u0$$OXm4Ab4u4QQxZcVsr_CxI",
       "component" : "Filter",
       "metadata" : {
-        "label" : "filter_keep_true",
-        "slug" : "filter_keep_true",
+        "label" : "filter_pk_true",
+        "slug" : "filter_pk_true",
         "x" : -600,
         "y" : -200,
         "phase" : 0,
@@ -580,8 +670,8 @@
       "id" : "eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha",
       "component" : "TableIterator",
       "metadata" : {
-        "label" : "iterator_validation_keep",
-        "slug" : "iterator_validation_keep",
+        "label" : "iterator_validation_pk",
+        "slug" : "iterator_validation_pk",
         "x" : -400,
         "y" : -200,
         "phase" : 0,
@@ -781,8 +871,8 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk", "pk_bool" ],
-          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "pk_bool", "pk" ],
+          "availableColumnNames" : [ ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "val_map_cat", "val_map_sch", "val_map_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "pk_bool", "pk" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
           "parallelismEnabled" : false,

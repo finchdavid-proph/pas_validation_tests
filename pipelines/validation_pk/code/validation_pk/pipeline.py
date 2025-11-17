@@ -8,8 +8,8 @@ from validation_pk.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_mapping_table = mapping_table(spark)
-    df_filter_keep_true = filter_keep_true(spark, df_mapping_table)
-    iterator_validation_keep(Config.iterator_validation_keep).apply(spark, df_filter_keep_true)
+    df_filter_pk_true = filter_pk_true(spark, df_mapping_table)
+    iterator_validation_pk(Config.iterator_validation_pk).apply(spark, df_filter_pk_true)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_pk").getOrCreate()

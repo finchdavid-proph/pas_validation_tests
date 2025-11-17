@@ -1,0 +1,54 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: validation
+    type: string
+    nullable: true
+    metadata:
+      description: Criteria or checks applied to ensure data integrity and accuracy.
+      mappings: []
+      tags: []
+  - name: source_catalog
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the catalog where the data originates.
+      mappings: []
+      tags: []
+  - name: source_schema
+    type: string
+    nullable: true
+    metadata:
+      description: Schema within the catalog that contains the data source.
+      mappings: []
+      tags: []
+  - name: source_table
+    type: string
+    nullable: true
+    metadata:
+      description: Table from which the data is sourced.
+      mappings: []
+      tags: []
+  - name: column
+    type: string
+    nullable: true
+    metadata:
+      description: Specific column in the source table to which the rule applies.
+      mappings: []
+      tags: []
+  - name: rule_type
+    type: string
+    nullable: true
+    metadata:
+      description: Category of the rule applied; Defines the type of rule being implemented.
+      mappings: []
+      tags: []
+  - name: logic
+    type: string
+    nullable: true
+    metadata:
+      description: Specific logic or condition applied within the rule; Details the
+        criteria or formula used.
+      mappings: []
+      tags: []

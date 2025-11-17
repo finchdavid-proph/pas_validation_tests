@@ -7,7 +7,7 @@ from . import *
 from .config import *
 
 
-class iterator_validation_keep(MetaGemExec):
+class iterator_validation_pk(MetaGemExec):
 
     def __init__(self, config):
         self.config = config

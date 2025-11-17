@@ -74,6 +74,36 @@
           "isReferenced" : false,
           "isProjectConfig" : true
         }, {
+          "name" : "val_map_cat",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_sch",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_mapping"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
           "name" : "iterator_validation_map",
           "kind" : {
             "type" : "record",
@@ -102,6 +132,36 @@
               "kind" : {
                 "type" : "string",
                 "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_cat",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_sch",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "validation_mapping"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -283,13 +343,43 @@
             "optional" : false,
             "isWorkflowNodeConfiguration" : false,
             "isReferenced" : false
+          }, {
+            "name" : "val_map_cat",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_sch",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_mapping"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
           } ]
         },
         "instances" : {
           "default" : {
             "mapping_catalog" : "dfinch",
             "mapping_schema" : "pad",
-            "mapping_table" : "table_mappings"
+            "mapping_table" : "table_mappings",
+            "val_map_cat" : "dfinch",
+            "val_map_sch" : "pad",
+            "val_map_table" : "validation_mapping"
           }
         }
       }
@@ -327,46 +417,19 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "XsTZWfsYNK5UOPJXK2hxS",
-    "source" : "JVAt908x1hxNzJuu-t4A1$$-cRYAQ_dw59fL48BTzTOm",
-    "sourcePort" : "aeYywKUPixtYcXK52E9Cn$$z_U_N53P-ax1PrXwxfTIv",
-    "target" : "d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k",
-    "targetPort" : "hMkiMLuPxr7NGM1PhV0z3$$pPM98jtSZ0KNSi-3UWl9l"
-  }, {
     "id" : "8dkphmwjLtbvvlaQ0FXjG",
     "source" : "d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k",
     "sourcePort" : "U5-abjv-gFXvgtEFStd8D$$3fVF8EbyzQ1Fo5pcrUiAU",
     "target" : "n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj",
     "targetPort" : "AnQTeUDuXbcjMfrNx8hv_$$-UQDhcc4LCq8DcIa9QDlX"
+  }, {
+    "id" : "fnXFgEx1dBev7qw9v3SbF$$VH_mUO2Ydlc21NfL7f3Rb",
+    "source" : "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh",
+    "sourcePort" : "QDSCp8_1V7tzWhbSJHK9q$$rG3gcH2rWhOQ0bvITpqEa",
+    "target" : "d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k",
+    "targetPort" : "hMkiMLuPxr7NGM1PhV0z3$$pPM98jtSZ0KNSi-3UWl9l"
   } ],
   "processes" : {
-    "JVAt908x1hxNzJuu-t4A1$$-cRYAQ_dw59fL48BTzTOm" : {
-      "id" : "JVAt908x1hxNzJuu-t4A1$$-cRYAQ_dw59fL48BTzTOm",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "mapping_table",
-        "slug" : "mapping_table",
-        "x" : 20,
-        "y" : 20,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "aeYywKUPixtYcXK52E9Cn$$z_U_N53P-ax1PrXwxfTIv",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/mapping_table"
-      }
-    },
     "d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k" : {
       "id" : "d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k",
       "component" : "Filter",
@@ -388,176 +451,65 @@
           "schema" : {
             "type" : "struct",
             "fields" : [ {
-              "name" : "bronze_catalog",
+              "name" : "validation",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Criteria or checks applied to ensure data integrity and accuracy.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "bronze_schema",
+              "name" : "source_catalog",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Name of the catalog where the data originates.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "bronze_table",
+              "name" : "source_schema",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Schema within the catalog that contains the data source.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "bronze_path",
+              "name" : "source_table",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Table from which the data is sourced.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "silver_catalog",
+              "name" : "column",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Specific column in the source table to which the rule applies.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "silver_schema",
+              "name" : "rule_type",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
+                "description" : "Category of the rule applied; Defines the type of rule being implemented.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
             }, {
-              "name" : "silver_table",
+              "name" : "logic",
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_path",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "suppress_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "keep",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "supress",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "map",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "sha256",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "mask",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bronze_sha256_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_sha256_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pk_bool",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
+                "description" : "Specific logic or condition applied within the rule; Details the criteria or formula used.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -602,186 +554,7 @@
       "ports" : {
         "inputs" : [ {
           "id" : "AnQTeUDuXbcjMfrNx8hv_$$-UQDhcc4LCq8DcIa9QDlX",
-          "slug" : "in0",
-          "schema" : {
-            "type" : "struct",
-            "fields" : [ {
-              "name" : "bronze_catalog",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bronze_schema",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bronze_table",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bronze_path",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_catalog",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_schema",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_table",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_path",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "suppress_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "keep",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "supress",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "map",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "sha256",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "mask",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "bronze_sha256_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "silver_sha256_columns",
-              "type" : {
-                "type" : "array",
-                "elementType" : "string",
-                "containsNull" : true
-              },
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pk",
-              "type" : "string",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            }, {
-              "name" : "pk_bool",
-              "type" : "boolean",
-              "nullable" : true,
-              "metadata" : {
-                "description" : "",
-                "mappings" : [ ],
-                "tags" : [ ]
-              }
-            } ]
-          },
-          "isStreaming" : false
+          "slug" : "in0"
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -870,186 +643,7 @@
           "ports" : {
             "inputs" : [ {
               "id" : "sx-kJm6kJH7nZ5qNnDs-u$$3NDjBkhIc0yukPK5VJxqA",
-              "slug" : "in0",
-              "schema" : {
-                "type" : "struct",
-                "fields" : [ {
-                  "name" : "bronze_catalog",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "bronze_schema",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "bronze_table",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "bronze_path",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "silver_catalog",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "silver_schema",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "silver_table",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "silver_path",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "suppress_columns",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "keep",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "supress",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "map",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "sha256",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "mask",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "bronze_sha256_columns",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "silver_sha256_columns",
-                  "type" : {
-                    "type" : "array",
-                    "elementType" : "string",
-                    "containsNull" : true
-                  },
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "pk",
-                  "type" : "string",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                }, {
-                  "name" : "pk_bool",
-                  "type" : "boolean",
-                  "nullable" : true,
-                  "metadata" : {
-                    "description" : "",
-                    "mappings" : [ ],
-                    "tags" : [ ]
-                  }
-                } ]
-              },
-              "isStreaming" : false
+              "slug" : "in0"
             } ],
             "outputs" : [ ],
             "selectedInputFields" : [ ],
@@ -1112,6 +706,33 @@
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/TableIterator",
         "projectName" : "ProphecySparkBasicsPython"
       }
+    },
+    "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh" : {
+      "id" : "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "validation_mapping",
+        "slug" : "validation_mapping",
+        "x" : 40,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "QDSCp8_1V7tzWhbSJHK9q$$rG3gcH2rWhOQ0bvITpqEa",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/validation_mapping"
+      }
     }
   },
   "ports" : {
@@ -1120,5 +741,278 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.d9Csb56JhYyI3gaR99n8U$$1PKYPlSj5Wxp6WesNnK8k",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `map` cannot be resolved. Did you mean one of the following? [`column`, `logic`, `rule_type`, `validation`, `source_schema`].;\n'Filter ('map = true)\n+- LogicalRDD [validation#2450, source_catalog#2451, source_schema#2452, source_table#2453, column#2454, rule_type#2455, logic#2456], false\n",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "Gems inside the subgraph are broken",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.processes.h_y-5z_IMi3BIubEF9zW5$$hB7iSCLliMFNvODuSRH0L",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[0].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: bronze_catalog maps to Config Field with name: bronze_catalog but column Name with name: bronze_catalog not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[1].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: bronze_schema maps to Config Field with name: bronze_schema but column Name with name: bronze_schema not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[2].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: bronze_table maps to Config Field with name: bronze_table but column Name with name: bronze_table not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[3].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: bronze_path maps to Config Field with name: bronze_path but column Name with name: bronze_path not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[4].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: silver_catalog maps to Config Field with name: silver_catalog but column Name with name: silver_catalog not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[5].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: silver_schema maps to Config Field with name: silver_schema but column Name with name: silver_schema not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[6].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: silver_table maps to Config Field with name: silver_table but column Name with name: silver_table not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[7].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: silver_path maps to Config Field with name: silver_path but column Name with name: silver_path not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[8].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: suppress_columns maps to Config Field with name: suppress_columns but column Name with name: suppress_columns not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[9].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: keep maps to Config Field with name: keep but column Name with name: keep not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[10].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: supress maps to Config Field with name: supress but column Name with name: supress not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[11].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: map maps to Config Field with name: map but column Name with name: map not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[12].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: sha256 maps to Config Field with name: sha256 but column Name with name: sha256 not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n_ZyrWdXVOypcrepi8MJ-$$BixNJFuXgXwW07gip7CXj.properties.metagemProperty.configToColumnMap[13].columnName",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 1,
+    "message" : "IteratorSettings error:: Column: mask maps to Config Field with name: mask but column Name with name: mask not found.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

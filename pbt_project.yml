@@ -11,27 +11,6 @@ buildSystemDetails:
   author: null
   createdAt: '2025-11-17 06:53:23'
 pipelines:
-  pipelines/validation_mask:
-    name: validation_mask
-    description: 'MASK: @Montoya, Jorge can add context to this objective. check for
-      distinct value violations, meaning check to see if the values are different
-      between bronze and silver (they should be as part of the masking process) And
-      distinct count mismatch, meanings checks to see if the distinct counts of those
-      values are different from bronze to silver (there are some filters applied that
-      are expected)'
-    author: finch.david@prophecy.io
-    mode: batch
-    artefactID: ''
-    language: python
-    createdAt: '2025-11-17 06:58:35'
-    datasets:
-      inputs:
-      - datasets/mapping_table
-      - datasets/source_bronze_mask
-      - datasets/source_silver_mask
-      outputs: []
-    subgraphs: []
-    dependencies: {}
   pipelines/validation_sha256:
     name: validation_sha256
     description: ''
@@ -90,7 +69,7 @@ pipelines:
     createdAt: '2025-11-17 07:03:50'
     datasets:
       inputs:
-      - datasets/mapping_table
+      - datasets/validation_mapping
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -106,6 +85,22 @@ pipelines:
       inputs:
       - datasets/mapping_table
       - datasets/source_bronze_pk
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_mask:
+    name: validation_mask
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 17:22:05'
+    datasets:
+      inputs:
+      - datasets/mapping_table
+      - datasets/source_bronze_mask
+      - datasets/source_silver_mask
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -253,6 +248,19 @@ datasets:
         description: ''
         author: finch.david@prophecy.io
         createdAt: '2025-11-17 12:21:14'
+  datasets/validation_mapping:
+    name: validation_mapping
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 17:33:20'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 17:33:20'
 templates: {}
 jobs: {}
 gemContainer:
