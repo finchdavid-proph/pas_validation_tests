@@ -1,6 +1,6 @@
 name: pas_validation_tests
 description: ''
-version: 0.0.6
+version: 0.0.7
 author: finch.david@prophecy.io
 language: python
 buildSystem: ''
