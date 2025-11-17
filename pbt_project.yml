@@ -55,6 +55,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/mapping_table
+      - datasets/source_bronze_keep
+      - datasets/source_silver_keep
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -100,6 +102,32 @@ datasets:
         description: ''
         author: finch.david@prophecy.io
         createdAt: '2025-11-17 07:18:13'
+  datasets/source_bronze_keep:
+    name: source_bronze_keep
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 07:40:58'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 07:40:58'
+  datasets/source_silver_keep:
+    name: source_silver_keep
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 07:42:31'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 07:42:31'
 templates: {}
 jobs: {}
 gemContainer:

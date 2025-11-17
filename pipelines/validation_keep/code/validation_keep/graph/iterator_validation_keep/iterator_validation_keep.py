@@ -15,6 +15,23 @@ class iterator_validation_keep(MetaGemExec):
 
     def execute(self, spark: SparkSession, subgraph_config: SubgraphConfig) -> List[DataFrame]:
         Config.update(subgraph_config)
+        df_source_bronze_table = source_bronze_table(spark)
+        df_bronze_columns_1 = bronze_columns_1(spark, df_source_bronze_table)
+        df_bronze_rename_1 = bronze_rename_1(spark, df_bronze_columns_1)
+        df_source_silver_table = source_silver_table(spark)
+        df_silver_columns_1 = silver_columns_1(spark, df_source_silver_table)
+        df_silver_rename_1 = silver_rename_1(spark, df_silver_columns_1)
+        df_join_bronze_silver_1 = join_bronze_silver_1(spark, df_bronze_rename_1, df_silver_rename_1)
+        df_bronze_distinct_counts_1 = bronze_distinct_counts_1(spark, df_source_bronze_table, df_bronze_columns_1)
+        df_inner_join_on_column_1 = inner_join_on_column_1(spark, df_bronze_distinct_counts_1, df_join_bronze_silver_1)
+        df_silver_distinct_counts_1 = silver_distinct_counts_1(spark, df_silver_columns_1, df_source_silver_table)
+        df_compare_distinct_counts_1 = compare_distinct_counts_1(
+            spark, 
+            df_inner_join_on_column_1, 
+            df_silver_distinct_counts_1
+        )
+        df_output_keep_1 = output_keep_1(spark, df_compare_distinct_counts_1)
+        df_reformat_bronze_path_1_1 = reformat_bronze_path_1_1(spark, df_output_keep_1)
         subgraph_config.update(Config)
 
     def apply(self, spark: SparkSession, in0: DataFrame, ) -> None:
