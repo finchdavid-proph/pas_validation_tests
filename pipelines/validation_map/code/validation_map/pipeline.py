@@ -4,9 +4,12 @@ from pyspark.sql.types import *
 from validation_map.config.ConfigStore import *
 from validation_map.functions import *
 from prophecy.utils import *
+from validation_map.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_mapping_table = mapping_table(spark)
+    df_filter_map_true = filter_map_true(spark, df_mapping_table)
+    iterator_validation_map(Config.iterator_validation_map).apply(spark, df_filter_map_true)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_map").getOrCreate()

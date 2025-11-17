@@ -12,6 +12,7 @@
         "pyPiVersion" : "2.1.4"
       },
       "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
       "workflowMode" : "batch"
     },
     "id" : "1",
@@ -42,7 +43,206 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "mapping_catalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_schema",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "table_mappings"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "iterator_validation_sha256",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "mapping_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "mapping_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "mapping_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "bronze_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_table",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_path",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_table",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_path",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "suppress_columns",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "value" : [ ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "keep",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "supress",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "map",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "sha256",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "mask",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -52,7 +252,47 @@
       "instances" : { },
       "selected" : "default",
       "nonEditable" : [ ],
-      "isSubscribedPipelineWithPipelineConfigs" : false
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "mapping_catalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_schema",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "table_mappings"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "mapping_catalog" : "dfinch",
+            "mapping_schema" : "pad",
+            "mapping_table" : "table_mappings"
+          }
+        }
+      }
     },
     "sparkConf" : [ {
       "name" : "spark.default.parallelism",
@@ -86,8 +326,662 @@
     "configTopLevelPackage" : "validation_sha256",
     "configurationVersion" : "v2"
   },
-  "connections" : [ ],
-  "processes" : { },
+  "connections" : [ {
+    "id" : "62XqKnmkrRnvj-GUXYo0g",
+    "source" : "AeH5-cousQ7iCDNBJYs3L$$ahlKbMxGEnxjFH2Vh-PL8",
+    "sourcePort" : "FIowYDqvHhll32_zjr1ia$$d5jlKaBs_WRzvqeEI88ld",
+    "target" : "zTfVzxmeigYYVq-9w6inU$$mXBl_IKWSMFyHwcKn42Lv",
+    "targetPort" : "74AAATfa6G_qBcKduQIoT$$s2xQQB1WAUhidM8HJpwk5"
+  }, {
+    "id" : "B8thHMYo2OoDnLHLRuwNt",
+    "source" : "zTfVzxmeigYYVq-9w6inU$$mXBl_IKWSMFyHwcKn42Lv",
+    "sourcePort" : "equC0YrgtpzWrTBrC6zaa$$w4MdF6YafWap5f9SGMlHq",
+    "target" : "mpPfCDASs6bf02r4drYKv$$rU4lFavOBM7Hb4AyvIT_R",
+    "targetPort" : "LXQnX1mx6jZMCfzG7nCct$$VlZU965M6McyiNqFwYCzx"
+  } ],
+  "processes" : {
+    "AeH5-cousQ7iCDNBJYs3L$$ahlKbMxGEnxjFH2Vh-PL8" : {
+      "id" : "AeH5-cousQ7iCDNBJYs3L$$ahlKbMxGEnxjFH2Vh-PL8",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "mapping_table",
+        "slug" : "mapping_table",
+        "x" : 20,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "FIowYDqvHhll32_zjr1ia$$d5jlKaBs_WRzvqeEI88ld",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/mapping_table"
+      }
+    },
+    "zTfVzxmeigYYVq-9w6inU$$mXBl_IKWSMFyHwcKn42Lv" : {
+      "id" : "zTfVzxmeigYYVq-9w6inU$$mXBl_IKWSMFyHwcKn42Lv",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_sha256_true",
+        "slug" : "filter_sha256_true",
+        "x" : 220,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "74AAATfa6G_qBcKduQIoT$$s2xQQB1WAUhidM8HJpwk5",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "bronze_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Schema name in the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Table name in the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Path to the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "suppress_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "keep",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the data should be retained in the silver layer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "supress",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the data should be suppressed in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "map",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag to determine if mapping is applied to the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sha256",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "mask",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag to determine if data masking is applied for privacy.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "equC0YrgtpzWrTBrC6zaa$$w4MdF6YafWap5f9SGMlHq",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "74AAATfa6G_qBcKduQIoT$$s2xQQB1WAUhidM8HJpwk5##sha256" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "sha256=true"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "mpPfCDASs6bf02r4drYKv$$rU4lFavOBM7Hb4AyvIT_R" : {
+      "id" : "mpPfCDASs6bf02r4drYKv$$rU4lFavOBM7Hb4AyvIT_R",
+      "component" : "TableIterator",
+      "metadata" : {
+        "label" : "iterator_validation_sha256",
+        "slug" : "iterator_validation_sha256",
+        "x" : 420,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LXQnX1mx6jZMCfzG7nCct$$VlZU965M6McyiNqFwYCzx",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "bronze_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Schema name in the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Table name in the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Path to the silver layer where the data is stored.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "suppress_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "keep",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the data should be retained in the silver layer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "supress",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates whether the data should be suppressed in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "map",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag to determine if mapping is applied to the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sha256",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "mask",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Flag to determine if data masking is applied for privacy.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "metagemProperty" : {
+          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask" ],
+          "numberOfThreads" : "5",
+          "maxIteration" : "1000",
+          "parallelismEnabled" : false,
+          "configToColumnMap" : [ {
+            "configName" : "bronze_catalog",
+            "columnName" : "bronze_catalog"
+          }, {
+            "configName" : "bronze_schema",
+            "columnName" : "bronze_schema"
+          }, {
+            "configName" : "bronze_table",
+            "columnName" : "bronze_table"
+          }, {
+            "configName" : "bronze_path",
+            "columnName" : "bronze_path"
+          }, {
+            "configName" : "silver_catalog",
+            "columnName" : "silver_catalog"
+          }, {
+            "configName" : "silver_schema",
+            "columnName" : "silver_schema"
+          }, {
+            "configName" : "silver_table",
+            "columnName" : "silver_table"
+          }, {
+            "configName" : "silver_path",
+            "columnName" : "silver_path"
+          }, {
+            "configName" : "suppress_columns",
+            "columnName" : "suppress_columns"
+          }, {
+            "configName" : "keep",
+            "columnName" : "keep"
+          }, {
+            "configName" : "supress",
+            "columnName" : "supress"
+          }, {
+            "configName" : "map",
+            "columnName" : "map"
+          }, {
+            "configName" : "sha256",
+            "columnName" : "sha256"
+          }, {
+            "configName" : "mask",
+            "columnName" : "mask"
+          } ]
+        }
+      },
+      "connections" : [ {
+        "id" : "9ILxWmcJvG8L1aGTL5PMO",
+        "source" : "mpPfCDASs6bf02r4drYKv$$rU4lFavOBM7Hb4AyvIT_R",
+        "sourcePort" : "LXQnX1mx6jZMCfzG7nCct$$VlZU965M6McyiNqFwYCzx",
+        "target" : "SfhGgdjZUv7TtKtmMTVwP$$GhkEgw8IKom9OGBjw5ToT",
+        "targetPort" : "vgjXTe65PhCElccEirvsA$$qjx7LVGcKrseVt4ONPV4R",
+        "visualProperty" : {
+          "isHidden" : true
+        }
+      } ],
+      "processes" : {
+        "SfhGgdjZUv7TtKtmMTVwP$$GhkEgw8IKom9OGBjw5ToT" : {
+          "id" : "SfhGgdjZUv7TtKtmMTVwP$$GhkEgw8IKom9OGBjw5ToT",
+          "component" : "ControlFlowInput",
+          "metadata" : {
+            "label" : "TableIterator_Input",
+            "slug" : "TableIterator_Input",
+            "x" : -192.40000000000003,
+            "y" : -55.8,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "visualProperty" : {
+              "isHidden" : true
+            }
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "vgjXTe65PhCElccEirvsA$$qjx7LVGcKrseVt4ONPV4R",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "bronze_catalog",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Schema name within the bronze data layer; Organizes tables in the raw data storage.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_table",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Table name in the bronze data layer; Contains raw data before processing.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_path",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_catalog",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Schema name in the silver layer where the data is stored.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_table",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Table name in the silver layer where the data is stored.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_path",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Path to the silver layer where the data is stored.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "suppress_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "keep",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Indicates whether the data should be retained in the silver layer.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "supress",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Indicates whether the data should be suppressed in the dataset.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "map",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Flag to determine if mapping is applied to the dataset.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "sha256",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Indicates if SHA-256 hashing is applied to the data for security.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "mask",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "Flag to determine if data masking is applied for privacy.",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 1,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowInput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "HG9tj0HauY_YMIjQidx28$$QK7jWoca9TsjXTO8Ud6yA" : {
+          "id" : "HG9tj0HauY_YMIjQidx28$$QK7jWoca9TsjXTO8Ud6yA",
+          "component" : "ControlFlowOutput",
+          "metadata" : {
+            "label" : "TableIterator_Output",
+            "slug" : "TableIterator_Output",
+            "x" : -192.40000000000003,
+            "y" : -55.8,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "visualProperty" : {
+              "isHidden" : true
+            }
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 0,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowOutput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/TableIterator",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    }
+  },
   "ports" : {
     "inputs" : [ ],
     "outputs" : [ ],

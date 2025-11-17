@@ -4,9 +4,12 @@ from pyspark.sql.types import *
 from validation_supress.config.ConfigStore import *
 from validation_supress.functions import *
 from prophecy.utils import *
+from validation_supress.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_mapping_table = mapping_table(spark)
+    df_filter_supress_true = filter_supress_true(spark, df_mapping_table)
+    iterator_validation_supress(Config.iterator_validation_supress).apply(spark, df_filter_supress_true)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_supress").getOrCreate()

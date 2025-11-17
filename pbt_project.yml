@@ -25,7 +25,8 @@ pipelines:
     language: python
     createdAt: '2025-11-17 06:58:35'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/mapping_table
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -38,7 +39,8 @@ pipelines:
     language: python
     createdAt: '2025-11-17 07:03:09'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/mapping_table
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -65,7 +67,8 @@ pipelines:
     language: python
     createdAt: '2025-11-17 07:03:32'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/mapping_table
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -78,7 +81,8 @@ pipelines:
     language: python
     createdAt: '2025-11-17 07:03:50'
     datasets:
-      inputs: []
+      inputs:
+      - datasets/mapping_table
       outputs: []
     subgraphs: []
     dependencies: {}

@@ -4,9 +4,12 @@ from pyspark.sql.types import *
 from validation_sha256.config.ConfigStore import *
 from validation_sha256.functions import *
 from prophecy.utils import *
+from validation_sha256.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    pass
+    df_mapping_table = mapping_table(spark)
+    df_filter_sha256_true = filter_sha256_true(spark, df_mapping_table)
+    iterator_validation_sha256(Config.iterator_validation_sha256).apply(spark, df_filter_sha256_true)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_sha256").getOrCreate()
