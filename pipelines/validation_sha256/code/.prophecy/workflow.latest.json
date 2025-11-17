@@ -263,6 +263,15 @@
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
               "isReferenced" : false
+            }, {
+              "name" : "pk",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
             } ]
           },
           "optional" : false,
@@ -418,7 +427,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -427,7 +436,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -436,7 +445,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the bronze data layer; Contains the raw data records.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -445,7 +454,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -454,7 +463,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -463,7 +472,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -472,7 +481,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -481,7 +490,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -494,7 +503,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -503,7 +512,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the data should be retained in the silver layer.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -512,7 +521,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -521,7 +530,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if the dataset should be mapped to another format or structure.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -530,7 +539,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -539,7 +548,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if data masking is applied to protect sensitive information.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -552,7 +561,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -565,7 +574,25 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -728,6 +755,15 @@
                 "elementType" : "string",
                 "containsNull" : true
               },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
               "nullable" : true,
               "metadata" : {
                 "description" : "",
@@ -930,6 +966,15 @@
                 "mappings" : [ ],
                 "tags" : [ ]
               }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
             } ]
           },
           "isStreaming" : false
@@ -941,8 +986,8 @@
       },
       "properties" : {
         "metagemProperty" : {
-          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns" ],
-          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns" ],
+          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
           "parallelismEnabled" : false,
@@ -994,6 +1039,9 @@
           }, {
             "configName" : "silver_sha256_columns",
             "columnName" : "silver_sha256_columns"
+          }, {
+            "configName" : "pk",
+            "columnName" : "pk"
           } ]
         }
       },
@@ -1031,30 +1079,6 @@
         "target" : "tlsr-mpumJhXXjdRj16P-$$6kf4Kck-cBtECJ5KPvTdU",
         "targetPort" : "b8zrSiSzWYtp21pd6LsYB$$rYlztv4M9AWKbiZKXw128"
       }, {
-        "id" : "uh25X8Z8X0d0goLsJu9sh",
-        "source" : "hojXsUdbWx4tEH3EdD_xb$$NsIxhYHWsseQ7OxX9YnVF",
-        "sourcePort" : "5jh1cZDhQ26L9ZXJ-cjwr$$m0EXvrn36mqLgf8iYUfJH",
-        "target" : "GzrfL_R8bXkqb4QUl2y8w$$3sLDK5AF8CYlBuyqBfmjP",
-        "targetPort" : "BpzqkAuwVeTdqa0lmkj3V$$wVJ5Dqz7351JHIO1tNUj4"
-      }, {
-        "id" : "55KhaW1EmvNF_H54UWAf-",
-        "source" : "BMxE1hq5p8tEpoicYy_9K$$VQ8GTN1yPwV97GrYfj26b",
-        "sourcePort" : "5nYJsSG-gruv1doqOVMx4$$NC_pY_F30IoThrqVvo1kP",
-        "target" : "zktcN4wTqJe64r9LK8P40$$b29Zpo4oxTGtfHnPzfo9n",
-        "targetPort" : "oE3bgGkD6YWtrp_68Fp77$$FWpLNJ1iYShQ2MVE4CYBD"
-      }, {
-        "id" : "ckuXC_P-73g5Vm7fvm5tX",
-        "source" : "hojXsUdbWx4tEH3EdD_xb$$NsIxhYHWsseQ7OxX9YnVF",
-        "sourcePort" : "5jh1cZDhQ26L9ZXJ-cjwr$$m0EXvrn36mqLgf8iYUfJH",
-        "target" : "zjdHZwHnSXv4oRfTkrfsY$$L1T-ds8Ce2_iVchH9tpPZ",
-        "targetPort" : "YGe-kmbrchHRDWlrZUCOL$$lE4OXRJcCHYEp29mmtAu5"
-      }, {
-        "id" : "cr9hc5S4j9BKH43Fruuyl",
-        "source" : "BMxE1hq5p8tEpoicYy_9K$$VQ8GTN1yPwV97GrYfj26b",
-        "sourcePort" : "5nYJsSG-gruv1doqOVMx4$$NC_pY_F30IoThrqVvo1kP",
-        "target" : "1hQQhF7uhgti9aRZpXeix$$pxafKdaIeAevWS_PAcqq0",
-        "targetPort" : "gO2U-_uHKOdzHtB23km3F$$TujdVQUC5TLRJ1_G0qlJw"
-      }, {
         "id" : "qBYHG9ttCrgKqkt-FHiju",
         "source" : "bw4mF6gppMBhlx5rDTVft$$-KmClCLVslWxbE6Y8eM-R",
         "sourcePort" : "a0XvL7BUkoYDQRasXd5WD$$ZyUPKuX9fB7-qXA3f4f8G",
@@ -1066,6 +1090,30 @@
         "sourcePort" : "IHn2oQDxUyyle-wnUd-qj$$XoXy6rQKuC1_sVgnft31I",
         "target" : "oMOM-yJMvXnfGHsOKxE95$$zPnv3Oyy24cHK_mKD20Fz",
         "targetPort" : "MB405RYisOF6Vl0yaPb1P$$2aqUlgDOjJO84ucfGTRLV"
+      }, {
+        "id" : "rzIld658MUOE0QBocPF_v",
+        "source" : "hojXsUdbWx4tEH3EdD_xb$$NsIxhYHWsseQ7OxX9YnVF",
+        "sourcePort" : "5jh1cZDhQ26L9ZXJ-cjwr$$m0EXvrn36mqLgf8iYUfJH",
+        "target" : "zjdHZwHnSXv4oRfTkrfsY$$L1T-ds8Ce2_iVchH9tpPZ",
+        "targetPort" : "YGe-kmbrchHRDWlrZUCOL$$lE4OXRJcCHYEp29mmtAu5"
+      }, {
+        "id" : "zUywXdCpfMjANYkN2irC-",
+        "source" : "BMxE1hq5p8tEpoicYy_9K$$VQ8GTN1yPwV97GrYfj26b",
+        "sourcePort" : "5nYJsSG-gruv1doqOVMx4$$NC_pY_F30IoThrqVvo1kP",
+        "target" : "zktcN4wTqJe64r9LK8P40$$b29Zpo4oxTGtfHnPzfo9n",
+        "targetPort" : "oE3bgGkD6YWtrp_68Fp77$$FWpLNJ1iYShQ2MVE4CYBD"
+      }, {
+        "id" : "8P_Syg3ZAzDjNwKQjc_Hp",
+        "source" : "hojXsUdbWx4tEH3EdD_xb$$NsIxhYHWsseQ7OxX9YnVF",
+        "sourcePort" : "5jh1cZDhQ26L9ZXJ-cjwr$$m0EXvrn36mqLgf8iYUfJH",
+        "target" : "GzrfL_R8bXkqb4QUl2y8w$$3sLDK5AF8CYlBuyqBfmjP",
+        "targetPort" : "BpzqkAuwVeTdqa0lmkj3V$$wVJ5Dqz7351JHIO1tNUj4"
+      }, {
+        "id" : "m9P3OjPDnlO39w6kb7_rT",
+        "source" : "BMxE1hq5p8tEpoicYy_9K$$VQ8GTN1yPwV97GrYfj26b",
+        "sourcePort" : "5nYJsSG-gruv1doqOVMx4$$NC_pY_F30IoThrqVvo1kP",
+        "target" : "1hQQhF7uhgti9aRZpXeix$$pxafKdaIeAevWS_PAcqq0",
+        "targetPort" : "gO2U-_uHKOdzHtB23km3F$$TujdVQUC5TLRJ1_G0qlJw"
       } ],
       "processes" : {
         "oMOM-yJMvXnfGHsOKxE95$$zPnv3Oyy24cHK_mKD20Fz" : {
@@ -1074,8 +1122,8 @@
           "metadata" : {
             "label" : "inner_join_suppress_1_1",
             "slug" : "inner_join_suppress_1_1",
-            "x" : -80,
-            "y" : 200,
+            "x" : 720,
+            "y" : 620,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1145,8 +1193,8 @@
           "metadata" : {
             "label" : "bronze_get_columns",
             "slug" : "bronze_get_columns",
-            "x" : -480,
-            "y" : -100,
+            "x" : 320,
+            "y" : 320,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1186,8 +1234,8 @@
           "metadata" : {
             "label" : "rename_column_to_bronze_format",
             "slug" : "rename_column_to_bronze_format",
-            "x" : -280,
-            "y" : -100,
+            "x" : 520,
+            "y" : 320,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1232,8 +1280,8 @@
           "metadata" : {
             "label" : "extract_bronze_sha256_columns",
             "slug" : "extract_bronze_sha256_columns",
-            "x" : -380,
-            "y" : -260,
+            "x" : 520,
+            "y" : 120,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1273,8 +1321,8 @@
           "metadata" : {
             "label" : "inner_join_suppress_1",
             "slug" : "inner_join_suppress_1",
-            "x" : -80,
-            "y" : -200,
+            "x" : 720,
+            "y" : 220,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1344,8 +1392,8 @@
           "metadata" : {
             "label" : "silver_get_columns",
             "slug" : "silver_get_columns",
-            "x" : -480,
-            "y" : 100,
+            "x" : 320,
+            "y" : 520,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1557,6 +1605,15 @@
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
+                }, {
+                  "name" : "pk",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
                 } ]
               },
               "isStreaming" : false
@@ -1586,8 +1643,8 @@
           "metadata" : {
             "label" : "source_silver_sha256",
             "slug" : "source_silver_sha256",
-            "x" : -700,
-            "y" : 100,
+            "x" : 120,
+            "y" : 620,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1613,8 +1670,8 @@
           "metadata" : {
             "label" : "source_bronze_sha256",
             "slug" : "source_bronze_sha256",
-            "x" : -700,
-            "y" : -100,
+            "x" : 120,
+            "y" : 220,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1640,8 +1697,8 @@
           "metadata" : {
             "label" : "rename_column_silver",
             "slug" : "rename_column_silver",
-            "x" : -280,
-            "y" : 100,
+            "x" : 520,
+            "y" : 520,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1723,8 +1780,8 @@
           "metadata" : {
             "label" : "extract_silver_sha256_columns",
             "slug" : "extract_silver_sha256_columns",
-            "x" : -380,
-            "y" : 280,
+            "x" : 520,
+            "y" : 720,
             "phase" : 0,
             "cache" : false,
             "detailedStats" : false,
@@ -1897,7 +1954,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.silver_col_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1913,7 +1970,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2041,7 +2098,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.bronze_col_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2057,7 +2114,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

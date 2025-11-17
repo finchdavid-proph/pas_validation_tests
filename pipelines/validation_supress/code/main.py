@@ -1,3 +1,3 @@
-from validation_supress.pipeline import main
+from validation_suppress.pipeline import main
 
 main()

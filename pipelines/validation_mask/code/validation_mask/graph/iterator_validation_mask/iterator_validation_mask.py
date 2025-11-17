@@ -15,6 +15,9 @@ class iterator_validation_mask(MetaGemExec):
 
     def execute(self, spark: SparkSession, subgraph_config: SubgraphConfig) -> List[DataFrame]:
         Config.update(subgraph_config)
+        df_source_silver_mask = source_silver_mask(spark)
+        df_source_bronze_mask = source_bronze_mask(spark)
+        df_compare_dataframes = compare_dataframes(spark, df_source_bronze_mask, df_source_silver_mask)
         subgraph_config.update(Config)
 
     def apply(self, spark: SparkSession, in0: DataFrame, ) -> None:

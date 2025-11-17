@@ -39,7 +39,7 @@ class iterator_validation_sha256(MetaGemExec):
         inDFs = []
         results = []
         conf_to_column = dict(
-            [("bronze_catalog", "bronze_catalog"),  ("bronze_schema", "bronze_schema"),  ("bronze_table", "bronze_table"),              ("bronze_path", "bronze_path"),  ("silver_catalog", "silver_catalog"),              ("silver_schema", "silver_schema"),  ("silver_table", "silver_table"),              ("silver_path", "silver_path"),  ("suppress_columns", "suppress_columns"),  ("keep", "keep"),              ("supress", "supress"),  ("map", "map"),  ("sha256", "sha256"),  ("mask", "mask"),              ("bronze_sha256_columns", "bronze_sha256_columns"),              ("silver_sha256_columns", "silver_sha256_columns")]
+            [("bronze_catalog", "bronze_catalog"),  ("bronze_schema", "bronze_schema"),  ("bronze_table", "bronze_table"),              ("bronze_path", "bronze_path"),  ("silver_catalog", "silver_catalog"),              ("silver_schema", "silver_schema"),  ("silver_table", "silver_table"),              ("silver_path", "silver_path"),  ("suppress_columns", "suppress_columns"),  ("keep", "keep"),              ("supress", "supress"),  ("map", "map"),  ("sha256", "sha256"),  ("mask", "mask"),              ("bronze_sha256_columns", "bronze_sha256_columns"),              ("silver_sha256_columns", "silver_sha256_columns"),  ("pk", "pk")]
         )
 
         if in0.count() > 1000:

@@ -27,6 +27,8 @@ pipelines:
     datasets:
       inputs:
       - datasets/mapping_table
+      - datasets/source_bronze_mask
+      - datasets/source_silver_mask
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -89,6 +91,21 @@ pipelines:
     datasets:
       inputs:
       - datasets/mapping_table
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_pk:
+    name: validation_pk
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 12:14:14'
+    datasets:
+      inputs:
+      - datasets/mapping_table
+      - datasets/source_bronze_pk
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -184,6 +201,58 @@ datasets:
         description: ''
         author: finch.david@prophecy.io
         createdAt: '2025-11-17 10:18:06'
+  datasets/source_bronze_mask:
+    name: source_bronze_mask
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 12:07:31'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 12:07:31'
+  datasets/source_silver_mask:
+    name: source_silver_mask
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 12:08:16'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 12:08:16'
+  datasets/source_bronze_pk:
+    name: source_bronze_pk
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 12:16:05'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 12:16:05'
+  datasets/source_silver_pk:
+    name: source_silver_pk
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 12:21:14'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 12:21:14'
 templates: {}
 jobs: {}
 gemContainer:

@@ -1,0 +1,1402 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.12.3",
+        "pyPiVersion" : "2.1.4"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/validation_pk",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "validation_pk",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "34673",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "finchdavidprophecyioteam.pasvalidationtests.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "mapping_catalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_schema",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "table_mappings"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "iterator_validation_keep",
+          "kind" : {
+            "type" : "record",
+            "fields" : [ {
+              "name" : "mapping_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : "dfinch"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "mapping_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : "pad"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "mapping_table",
+              "kind" : {
+                "type" : "string",
+                "value" : "table_mappings"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "bronze_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_table",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "bronze_path",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_catalog",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_schema",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_table",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "silver_path",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "suppress_columns",
+              "kind" : {
+                "type" : "array",
+                "elementType" : {
+                  "type" : "string",
+                  "value" : null
+                },
+                "value" : [ ]
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "keep",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "supress",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "map",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "sha256",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "mask",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pk_bool",
+              "kind" : {
+                "type" : "boolean",
+                "value" : true
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            }, {
+              "name" : "pk",
+              "kind" : {
+                "type" : "string",
+                "value" : ""
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false
+            } ]
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : true,
+          "isReferenced" : false
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "mapping_catalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_schema",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "table_mappings"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "mapping_catalog" : "dfinch",
+            "mapping_schema" : "pad",
+            "mapping_table" : "table_mappings"
+          }
+        }
+      }
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "validation_pk",
+    "configTopLevelPackage" : "validation_pk",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "jDTuxDLXP1sCjVXm6IC03",
+    "source" : "dRrpEi20WDOvotmj0D9u0$$OXm4Ab4u4QQxZcVsr_CxI",
+    "sourcePort" : "OIzKDLBExY8P1i358qeWB$$-8H3rWwUBULJoAz92TUGD",
+    "target" : "eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha",
+    "targetPort" : "1sDsndwLm3WQcNtEIBV2L$$YLN8fy_WANyP0jlrp6QlQ"
+  }, {
+    "id" : "Ua_Yf3wLUEyx70mtN_wwU$$Dos3gLuk7S6kYhOSwjqQt",
+    "source" : "pj05iLYPoC0CNOx5DXwjx$$RUR_Rr_4SNISsUYg_Z1cn",
+    "sourcePort" : "xbYPZBdhXwVlTXs7SeSBf$$xmcduobp4lXosF3qM8p8s",
+    "target" : "dRrpEi20WDOvotmj0D9u0$$OXm4Ab4u4QQxZcVsr_CxI",
+    "targetPort" : "5wvDzjA2ql0WrSMEV41jd$$HKL5q7fxypcQV7g4gkhv4"
+  } ],
+  "processes" : {
+    "dRrpEi20WDOvotmj0D9u0$$OXm4Ab4u4QQxZcVsr_CxI" : {
+      "id" : "dRrpEi20WDOvotmj0D9u0$$OXm4Ab4u4QQxZcVsr_CxI",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "filter_keep_true",
+        "slug" : "filter_keep_true",
+        "x" : -600,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "5wvDzjA2ql0WrSMEV41jd$$HKL5q7fxypcQV7g4gkhv4",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "bronze_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "suppress_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "keep",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "supress",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "map",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sha256",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "mask",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "OIzKDLBExY8P1i358qeWB$$-8H3rWwUBULJoAz92TUGD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "pk_bool=true"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha" : {
+      "id" : "eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha",
+      "component" : "TableIterator",
+      "metadata" : {
+        "label" : "iterator_validation_keep",
+        "slug" : "iterator_validation_keep",
+        "x" : -400,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "1sDsndwLm3WQcNtEIBV2L$$YLN8fy_WANyP0jlrp6QlQ",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "bronze_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_catalog",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_schema",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_table",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_path",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "suppress_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "keep",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "supress",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "map",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "sha256",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "mask",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "bronze_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "silver_sha256_columns",
+              "type" : {
+                "type" : "array",
+                "elementType" : "string",
+                "containsNull" : true
+              },
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "metagemProperty" : {
+          "availableColumnNames" : [ "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "bronze_sha256_columns", "silver_sha256_columns", "pk", "pk_bool" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "bronze_catalog", "bronze_schema", "bronze_table", "bronze_path", "silver_catalog", "silver_schema", "silver_table", "silver_path", "suppress_columns", "keep", "supress", "map", "sha256", "mask", "pk_bool", "pk" ],
+          "numberOfThreads" : "5",
+          "maxIteration" : "1000",
+          "parallelismEnabled" : false,
+          "configToColumnMap" : [ {
+            "configName" : "bronze_catalog",
+            "columnName" : "bronze_catalog"
+          }, {
+            "configName" : "bronze_schema",
+            "columnName" : "bronze_schema"
+          }, {
+            "configName" : "bronze_table",
+            "columnName" : "bronze_table"
+          }, {
+            "configName" : "bronze_path",
+            "columnName" : "bronze_path"
+          }, {
+            "configName" : "silver_catalog",
+            "columnName" : "silver_catalog"
+          }, {
+            "configName" : "silver_schema",
+            "columnName" : "silver_schema"
+          }, {
+            "configName" : "silver_table",
+            "columnName" : "silver_table"
+          }, {
+            "configName" : "silver_path",
+            "columnName" : "silver_path"
+          }, {
+            "configName" : "suppress_columns",
+            "columnName" : "suppress_columns"
+          }, {
+            "configName" : "keep",
+            "columnName" : "keep"
+          }, {
+            "configName" : "supress",
+            "columnName" : "supress"
+          }, {
+            "configName" : "map",
+            "columnName" : "map"
+          }, {
+            "configName" : "sha256",
+            "columnName" : "sha256"
+          }, {
+            "configName" : "mask",
+            "columnName" : "mask"
+          }, {
+            "configName" : "pk_bool",
+            "columnName" : "pk_bool"
+          }, {
+            "configName" : "pk",
+            "columnName" : "pk"
+          } ]
+        }
+      },
+      "connections" : [ {
+        "id" : "2n27GL662F7abN8dvE0qv",
+        "source" : "eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha",
+        "sourcePort" : "1sDsndwLm3WQcNtEIBV2L$$YLN8fy_WANyP0jlrp6QlQ",
+        "target" : "bhTz7hP-fLdl0DjlZsj1N$$w9Ha3SsaU_ueETUmdkR2W",
+        "targetPort" : "dHxURtelLDYx1Vyk0ynVy$$wKsMQm8caPYk_RfftYEA1",
+        "visualProperty" : {
+          "isHidden" : true
+        }
+      }, {
+        "id" : "nPcsio8KxNVbkjwyH7ZU5",
+        "source" : "e6TewFXrjbfr49XExLaLf$$_u-8Wq2WoOBfsnDur6Wo2",
+        "sourcePort" : "O9FhzKIqCLEDkUN1uP5R4$$pe-UauE4JuC-tiImmzFKJ",
+        "target" : "JflyRp_UQrYhXxUEOBAvp$$pNdQDGYN-5nnLzpgglFac",
+        "targetPort" : "d0OsDvwRzSVJyi8_sNmGn$$icm-1aHozgjXdlOR3g31U"
+      }, {
+        "id" : "Dotrqi_5VS-yyPL5naDA8",
+        "source" : "JflyRp_UQrYhXxUEOBAvp$$pNdQDGYN-5nnLzpgglFac",
+        "sourcePort" : "3WsLvQoXKmaxFCTkMLgF6$$VzMN4foYytqgsTeqhYndw",
+        "target" : "HNDf7vfPslxf_HF3zvvFL$$t21BdWkvfDhahACaoSEVI",
+        "targetPort" : "oORX2tqiEsknlDo2Y2iC5$$GkBGajhwggesizravWdUa"
+      } ],
+      "processes" : {
+        "HNDf7vfPslxf_HF3zvvFL$$t21BdWkvfDhahACaoSEVI" : {
+          "id" : "HNDf7vfPslxf_HF3zvvFL$$t21BdWkvfDhahACaoSEVI",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "evaluate_keep_logic",
+            "slug" : "evaluate_keep_logic",
+            "x" : 520,
+            "y" : 120,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "oORX2tqiEsknlDo2Y2iC5$$GkBGajhwggesizravWdUa",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "R3FbrEKDaJyrRUIqkUxXT$$RmwdONZtZXucKbxjzbOwj",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'PK'"
+              },
+              "description" : ""
+            }, {
+              "target" : "sub_rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "CAST(NULL AS STRING)"
+              },
+              "description" : ""
+            }, {
+              "target" : "bronze_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{bronze_path}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "silver_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{silver_path}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "column_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{pk}}'"
+              },
+              "description" : ""
+            }, {
+              "target" : "rule_status",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "rule_status"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_timestamp",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "current_timestamp()"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "bhTz7hP-fLdl0DjlZsj1N$$w9Ha3SsaU_ueETUmdkR2W" : {
+          "id" : "bhTz7hP-fLdl0DjlZsj1N$$w9Ha3SsaU_ueETUmdkR2W",
+          "component" : "ControlFlowInput",
+          "metadata" : {
+            "label" : "TableIterator_Input",
+            "slug" : "TableIterator_Input",
+            "x" : -821.6,
+            "y" : -214.2,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "visualProperty" : {
+              "isHidden" : true
+            }
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "dHxURtelLDYx1Vyk0ynVy$$wKsMQm8caPYk_RfftYEA1",
+              "slug" : "in0",
+              "schema" : {
+                "type" : "struct",
+                "fields" : [ {
+                  "name" : "bronze_catalog",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_table",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_path",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_catalog",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_schema",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_table",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_path",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "suppress_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "keep",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "supress",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "map",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "sha256",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "mask",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "bronze_sha256_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "silver_sha256_columns",
+                  "type" : {
+                    "type" : "array",
+                    "elementType" : "string",
+                    "containsNull" : true
+                  },
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pk",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pk_bool",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                } ]
+              },
+              "isStreaming" : false
+            } ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 1,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowInput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "e6TewFXrjbfr49XExLaLf$$_u-8Wq2WoOBfsnDur6Wo2" : {
+          "id" : "e6TewFXrjbfr49XExLaLf$$_u-8Wq2WoOBfsnDur6Wo2",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_bronze_pk_1",
+            "slug" : "source_bronze_pk_1",
+            "x" : 120,
+            "y" : 120,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "O9FhzKIqCLEDkUN1uP5R4$$pe-UauE4JuC-tiImmzFKJ",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/source_bronze_pk"
+          }
+        },
+        "2jRuxgLyqDA8KKXlOuG5l$$tSAJRA5wEKzMOORbyP79V" : {
+          "id" : "2jRuxgLyqDA8KKXlOuG5l$$tSAJRA5wEKzMOORbyP79V",
+          "component" : "ControlFlowOutput",
+          "metadata" : {
+            "label" : "TableIterator_Output",
+            "slug" : "TableIterator_Output",
+            "x" : -821.6,
+            "y" : -214.2,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "visualProperty" : {
+              "isHidden" : true
+            }
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "minNumberOfInPorts" : 0,
+            "allowOutportAddDelete" : true,
+            "description" : "",
+            "allowInportAddDelete" : true,
+            "minNumberOfOutPorts" : 0,
+            "allowOutportRename" : true,
+            "allowInportRename" : true
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowOutput",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "JflyRp_UQrYhXxUEOBAvp$$pNdQDGYN-5nnLzpgglFac" : {
+          "id" : "JflyRp_UQrYhXxUEOBAvp$$pNdQDGYN-5nnLzpgglFac",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "count_records",
+            "slug" : "count_records",
+            "x" : 320,
+            "y" : 120,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "d0OsDvwRzSVJyi8_sNmGn$$icm-1aHozgjXdlOR3g31U",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "3WsLvQoXKmaxFCTkMLgF6$$VzMN4foYytqgsTeqhYndw",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "rule_status",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "CASE\n  WHEN COUNT(\"DISTINCT {{pk}}\") = COUNT(*) THEN 'true'\n  ELSE 'false'\nEND"
+              },
+              "description" : ""
+            } ],
+            "importString" : "original_count,COUNT(*)\npk_distinct,COUNT(DISTINCT '{{pk}}')\nvalid,``CASE\n  WHEN pk_distinct = original_count THEN 'true'\n  ELSE 'false'\nEND``",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/TableIterator",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "pj05iLYPoC0CNOx5DXwjx$$RUR_Rr_4SNISsUYg_Z1cn" : {
+      "id" : "pj05iLYPoC0CNOx5DXwjx$$RUR_Rr_4SNISsUYg_Z1cn",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "mapping_table",
+        "slug" : "mapping_table",
+        "x" : -760,
+        "y" : -200,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "xbYPZBdhXwVlTXs7SeSBf$$xmcduobp4lXosF3qM8p8s",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/mapping_table"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Gems inside the subgraph have warning",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha.processes.e6TewFXrjbfr49XExLaLf$$_u-8Wq2WoOBfsnDur6Wo2.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha.processes.JflyRp_UQrYhXxUEOBAvp$$pNdQDGYN-5nnLzpgglFac",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha.processes.HNDf7vfPslxf_HF3zvvFL$$t21BdWkvfDhahACaoSEVI",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.eX2cMdy87EowqumG2VOkL$$d0lVGe0HsI0PaMbqVMvha.processes.HNDf7vfPslxf_HF3zvvFL$$t21BdWkvfDhahACaoSEVI.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column rule_status",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

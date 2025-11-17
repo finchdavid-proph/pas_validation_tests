@@ -392,7 +392,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -401,7 +401,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -410,7 +410,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the bronze data layer; Contains the raw data records.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -419,7 +419,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -428,7 +428,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -437,7 +437,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -446,7 +446,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -455,7 +455,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -468,7 +468,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -477,7 +477,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the data should be retained in the silver layer.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -486,7 +486,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -495,7 +495,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if the dataset should be mapped to another format or structure.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -504,7 +504,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -513,7 +513,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if data masking is applied to protect sensitive information.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -526,7 +526,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -539,7 +539,25 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -592,7 +610,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -601,7 +619,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -610,7 +628,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the bronze data layer; Contains the raw data records.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -619,7 +637,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -628,7 +646,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -637,7 +655,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Schema name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -646,7 +664,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Table name in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -655,7 +673,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Path in the silver layer where the data is stored.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -668,7 +686,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -677,7 +695,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates whether the data should be retained in the silver layer.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -686,7 +704,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -695,7 +713,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if the dataset should be mapped to another format or structure.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -704,7 +722,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -713,7 +731,7 @@
               "type" : "boolean",
               "nullable" : true,
               "metadata" : {
-                "description" : "Indicates if data masking is applied to protect sensitive information.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -726,7 +744,7 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -739,7 +757,25 @@
               },
               "nullable" : true,
               "metadata" : {
-                "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "pk_bool",
+              "type" : "boolean",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -813,8 +849,96 @@
         "visualProperty" : {
           "isHidden" : true
         }
+      }, {
+        "id" : "XVExh6YP_hZNtY2e9pe0z$$LsnQO0A2tZSBTTXg10vRE",
+        "source" : "Yh5QY-pMbyrSGFvWyjpr4$$BvbyP57DFwJ9LdJ-uahsN",
+        "sourcePort" : "cUuvACYisw3uQg_cEH_jl$$0C0uUSX-K7qL5ATUAKtW_",
+        "target" : "LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5",
+        "targetPort" : "HH7AuA8ENRNbHporCUALI$$fgqNCFyaOEF9u2pnne1pm"
+      }, {
+        "id" : "fI9khoNy8yvLKkblfWyZc",
+        "source" : "ANTs8IrjUROraxIwYh1Fy$$6dqF35Pdr3EYUtql0GbBr",
+        "sourcePort" : "RtHgmQUojxCZI-_fXH_En$$xh74gm7akQJtGXLtjL4EV",
+        "target" : "LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5",
+        "targetPort" : "budwlXBCAOjP7qECpd23Q$$_sGfs82Qbr-K_RMJpVfMF"
       } ],
       "processes" : {
+        "ANTs8IrjUROraxIwYh1Fy$$6dqF35Pdr3EYUtql0GbBr" : {
+          "id" : "ANTs8IrjUROraxIwYh1Fy$$6dqF35Pdr3EYUtql0GbBr",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_silver_mask",
+            "slug" : "source_silver_mask",
+            "x" : -700,
+            "y" : -100,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "RtHgmQUojxCZI-_fXH_En$$xh74gm7akQJtGXLtjL4EV",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/source_silver_mask"
+          }
+        },
+        "LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5" : {
+          "id" : "LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5",
+          "component" : "CompareColumns",
+          "metadata" : {
+            "label" : "compare_dataframes",
+            "slug" : "compare_dataframes",
+            "x" : -520,
+            "y" : -200,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "HH7AuA8ENRNbHporCUALI$$fgqNCFyaOEF9u2pnne1pm",
+              "slug" : "in0"
+            }, {
+              "id" : "budwlXBCAOjP7qECpd23Q$$_sGfs82Qbr-K_RMJpVfMF",
+              "slug" : "in1"
+            } ],
+            "outputs" : [ {
+              "id" : "zC2WrJeCbGMxKVDRFOHgH$$elJf6UEtu5LsTpOZQwDHk",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "columnName" : "column_name",
+            "mismatchExampleLeft" : "mismatch_example_left",
+            "idColumns" : [ {
+              "format" : "python",
+              "expression" : "{{pk}}"
+            } ],
+            "activeTab" : "output_columns",
+            "columnsSelector" : [ ],
+            "mismatchIdColumnPrefix" : "mismatch_example_",
+            "matchCount" : "match_count",
+            "mismatchCount" : "mismatch_count",
+            "mismatchExampleRight" : "mismatch_example_right"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/CompareColumns",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
         "lK_8dxmOuR4-FittR3nRL$$fDObjWLSxnyzsyotOnDtR" : {
           "id" : "lK_8dxmOuR4-FittR3nRL$$fDObjWLSxnyzsyotOnDtR",
           "component" : "ControlFlowInput",
@@ -842,7 +966,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Catalog name for the bronze data layer; Represents the initial raw data storage.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -851,7 +975,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Schema name within the bronze data layer; Organizes the raw data into specific categories.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -860,7 +984,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Table name in the bronze data layer; Contains the raw data records.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -869,7 +993,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Path location of the bronze data; Indicates where the raw data is stored.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -878,7 +1002,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Catalog name for the silver data layer; Represents the processed and refined data storage.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -887,7 +1011,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Schema name in the silver layer where the data is stored.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -896,7 +1020,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Table name in the silver layer where the data is stored.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -905,7 +1029,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Path in the silver layer where the data is stored.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -918,7 +1042,7 @@
                   },
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "List of columns to be suppressed for privacy or compliance reasons.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -927,7 +1051,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates whether the data should be retained in the silver layer.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -936,7 +1060,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates if certain columns should be hidden or not included in the dataset.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -945,7 +1069,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates if the dataset should be mapped to another format or structure.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -954,7 +1078,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates if SHA-256 hashing is applied to the dataset for security.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -963,7 +1087,7 @@
                   "type" : "boolean",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Indicates if data masking is applied to protect sensitive information.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -976,7 +1100,7 @@
                   },
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "List of column names in the bronze dataset that are subject to SHA-256 hashing.",
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -989,7 +1113,25 @@
                   },
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "List of hashed column names in the silver dataset; Contains hashed versions of sensitive data columns.",
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pk",
+                  "type" : "string",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
+                    "mappings" : [ ],
+                    "tags" : [ ]
+                  }
+                }, {
+                  "name" : "pk_bool",
+                  "type" : "boolean",
+                  "nullable" : true,
+                  "metadata" : {
+                    "description" : "",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -1014,6 +1156,33 @@
           "componentInfo" : {
             "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowInput",
             "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "Yh5QY-pMbyrSGFvWyjpr4$$BvbyP57DFwJ9LdJ-uahsN" : {
+          "id" : "Yh5QY-pMbyrSGFvWyjpr4$$BvbyP57DFwJ9LdJ-uahsN",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_bronze_mask",
+            "slug" : "source_bronze_mask",
+            "x" : -700,
+            "y" : -280,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "cUuvACYisw3uQg_cEH_jl$$0C0uUSX-K7qL5ATUAKtW_",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/source_bronze_mask"
           }
         },
         "2MBEbQhWmdPFH3osOHGR1$$DEmIMtvEaXJ8ZS0RE56sK" : {
@@ -1066,5 +1235,86 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.n9ORcxvJcmQkwpN9oOyYs$$BGiCKjIOaaGci1es5a0uI",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Gems inside the subgraph have warning",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n9ORcxvJcmQkwpN9oOyYs$$BGiCKjIOaaGci1es5a0uI.processes.ANTs8IrjUROraxIwYh1Fy$$6dqF35Pdr3EYUtql0GbBr.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n9ORcxvJcmQkwpN9oOyYs$$BGiCKjIOaaGci1es5a0uI.processes.Yh5QY-pMbyrSGFvWyjpr4$$BvbyP57DFwJ9LdJ-uahsN.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n9ORcxvJcmQkwpN9oOyYs$$BGiCKjIOaaGci1es5a0uI.processes.LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.n9ORcxvJcmQkwpN9oOyYs$$BGiCKjIOaaGci1es5a0uI.processes.LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5.LdtXMeqW_RYH5Rj67sPWb$$U682_Rv_MAmSnjNrvRk-5",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Error in validating the component: 'NoneType' object has no attribute 'fields'",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }

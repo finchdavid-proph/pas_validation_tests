@@ -6,60 +6,56 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Catalog name for the bronze data layer; Represents the initial
-        raw data storage.
+      description: ''
       mappings: []
       tags: []
   - name: bronze_schema
     type: string
     nullable: true
     metadata:
-      description: Schema name within the bronze data layer; Organizes the raw data
-        into specific categories.
+      description: ''
       mappings: []
       tags: []
   - name: bronze_table
     type: string
     nullable: true
     metadata:
-      description: Table name in the bronze data layer; Contains the raw data records.
+      description: ''
       mappings: []
       tags: []
   - name: bronze_path
     type: string
     nullable: true
     metadata:
-      description: Path location of the bronze data; Indicates where the raw data
-        is stored.
+      description: ''
       mappings: []
       tags: []
   - name: silver_catalog
     type: string
     nullable: true
     metadata:
-      description: Catalog name for the silver data layer; Represents the processed
-        and refined data storage.
+      description: ''
       mappings: []
       tags: []
   - name: silver_schema
     type: string
     nullable: true
     metadata:
-      description: Schema name in the silver layer where the data is stored.
+      description: ''
       mappings: []
       tags: []
   - name: silver_table
     type: string
     nullable: true
     metadata:
-      description: Table name in the silver layer where the data is stored.
+      description: ''
       mappings: []
       tags: []
   - name: silver_path
     type: string
     nullable: true
     metadata:
-      description: Path in the silver layer where the data is stored.
+      description: ''
       mappings: []
       tags: []
   - name: suppress_columns
@@ -69,44 +65,42 @@ schema:
       containsNull: true
     nullable: true
     metadata:
-      description: List of columns to be suppressed for privacy or compliance reasons.
+      description: ''
       mappings: []
       tags: []
   - name: keep
     type: boolean
     nullable: true
     metadata:
-      description: Indicates whether the data should be retained in the silver layer.
+      description: ''
       mappings: []
       tags: []
   - name: supress
     type: boolean
     nullable: true
     metadata:
-      description: Indicates if certain columns should be hidden or not included in
-        the dataset.
+      description: ''
       mappings: []
       tags: []
   - name: map
     type: boolean
     nullable: true
     metadata:
-      description: Indicates if the dataset should be mapped to another format or
-        structure.
+      description: ''
       mappings: []
       tags: []
   - name: sha256
     type: boolean
     nullable: true
     metadata:
-      description: Indicates if SHA-256 hashing is applied to the dataset for security.
+      description: ''
       mappings: []
       tags: []
   - name: mask
     type: boolean
     nullable: true
     metadata:
-      description: Indicates if data masking is applied to protect sensitive information.
+      description: ''
       mappings: []
       tags: []
   - name: bronze_sha256_columns
@@ -116,8 +110,7 @@ schema:
       containsNull: true
     nullable: true
     metadata:
-      description: List of column names in the bronze dataset that are subject to
-        SHA-256 hashing.
+      description: ''
       mappings: []
       tags: []
   - name: silver_sha256_columns
@@ -127,7 +120,20 @@ schema:
       containsNull: true
     nullable: true
     metadata:
-      description: List of hashed column names in the silver dataset; Contains hashed
-        versions of sensitive data columns.
+      description: ''
+      mappings: []
+      tags: []
+  - name: pk
+    type: string
+    nullable: true
+    metadata:
+      description: ''
+      mappings: []
+      tags: []
+  - name: pk_bool
+    type: boolean
+    nullable: true
+    metadata:
+      description: ''
       mappings: []
       tags: []
