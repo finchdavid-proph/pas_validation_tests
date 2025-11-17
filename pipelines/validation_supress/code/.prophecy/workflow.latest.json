@@ -2138,7 +2138,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.bronze_col_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2154,7 +2154,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2266,7 +2266,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.bronze_column_name [Conditions]",
+    "message" : "No match found for column in1.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2282,7 +2282,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.silver_col_name [Conditions]",
+    "message" : "No match found for column in0.bronze_column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2330,7 +2330,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists [Expressions]",
+    "message" : "No match found for column silver_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2346,7 +2346,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column silver_exists [Expressions]",
+    "message" : "No match found for column bronze_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

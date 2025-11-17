@@ -755,7 +755,7 @@
       }
     },
     "severity" : 1,
-    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `map` cannot be resolved. Did you mean one of the following? [`column`, `logic`, `rule_type`, `validation`, `source_schema`].;\n'Filter ('map = true)\n+- LogicalRDD [validation#2450, source_catalog#2451, source_schema#2452, source_table#2453, column#2454, rule_type#2455, logic#2456], false\n",
+    "message" : "Error occurred while doing Schema Analysis: [UNRESOLVED_COLUMN.WITH_SUGGESTION] A column or function parameter with name `map` cannot be resolved. Did you mean one of the following? [`column`, `logic`, `rule_type`, `validation`, `source_schema`].;\n'Filter ('map = true)\n+- LogicalRDD [validation#7589, source_catalog#7590, source_schema#7591, source_table#7592, column#7593, rule_type#7594, logic#7595], false\n",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
