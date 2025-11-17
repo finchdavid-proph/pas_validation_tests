@@ -70,7 +70,7 @@ pipelines:
     datasets:
       inputs:
       - datasets/source_map
-      - datasets/validation_mapping
+      - datasets/val_map_2
       outputs: []
     subgraphs: []
     dependencies: {}
@@ -302,6 +302,19 @@ datasets:
         description: ''
         author: finch.david@prophecy.io
         createdAt: '2025-11-17 18:44:08'
+  datasets/val_map_2:
+    name: val_map_2
+    description: ''
+    author: finch.david@prophecy.io
+    createdAt: '2025-11-17 20:37:47'
+    mode: batch
+    physicalDatasets:
+      spark_guides_prod_3_pat:
+        fabricId: 34673
+        datasetType: Database
+        description: ''
+        author: finch.david@prophecy.io
+        createdAt: '2025-11-17 20:37:47'
 templates: {}
 jobs: {}
 gemContainer:

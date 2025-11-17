@@ -1,2 +1,2 @@
 from .TableIterator_1 import TableIterator_1
-from .validation_mapping import validation_mapping
+from .val_map_2 import val_map_2

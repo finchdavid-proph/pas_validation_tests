@@ -55,6 +55,15 @@
       "optional" : false,
       "isWorkflowNodeConfiguration" : false,
       "isReferenced" : false
+    }, {
+      "name" : "val_map_2",
+      "kind" : {
+        "type" : "string",
+        "value" : "val_map_2"
+      },
+      "optional" : false,
+      "isWorkflowNodeConfiguration" : false,
+      "isReferenced" : false
     } ]
   },
   "instances" : {
@@ -64,7 +73,8 @@
       "mapping_table" : "table_mappings",
       "val_map_cat" : "dfinch",
       "val_map_sch" : "pad",
-      "val_map_table" : "validation_mapping"
+      "val_map_table" : "validation_mapping",
+      "val_map_2" : "val_map_2"
     }
   }
 }

@@ -7,8 +7,8 @@ from prophecy.utils import *
 from validation_map.graph import *
 
 def pipeline(spark: SparkSession) -> None:
-    df_validation_mapping = validation_mapping(spark)
-    TableIterator_1(Config.TableIterator_1).apply(spark, df_validation_mapping)
+    df_val_map_2 = val_map_2(spark)
+    TableIterator_1(Config.TableIterator_1).apply(spark, df_val_map_2)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_map").getOrCreate()

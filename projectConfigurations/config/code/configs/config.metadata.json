@@ -42,5 +42,12 @@
       "value" : "validation_mapping"
     },
     "optional" : false
+  }, {
+    "name" : "val_map_2",
+    "kind" : {
+      "type" : "string",
+      "value" : "val_map_2"
+    },
+    "optional" : false
   } ]
 }

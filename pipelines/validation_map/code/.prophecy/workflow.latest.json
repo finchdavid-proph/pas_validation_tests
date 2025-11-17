@@ -105,6 +105,16 @@
           "isReferenced" : false,
           "isProjectConfig" : true
         }, {
+          "name" : "val_map_2",
+          "kind" : {
+            "type" : "string",
+            "value" : "val_map_2"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
           "name" : "TableIterator_1",
           "kind" : {
             "type" : "record",
@@ -163,6 +173,16 @@
               "kind" : {
                 "type" : "string",
                 "value" : "validation_mapping"
+              },
+              "optional" : false,
+              "isWorkflowNodeConfiguration" : false,
+              "isReferenced" : false,
+              "isProjectConfig" : true
+            }, {
+              "name" : "val_map_2",
+              "kind" : {
+                "type" : "string",
+                "value" : "val_map_2"
               },
               "optional" : false,
               "isWorkflowNodeConfiguration" : false,
@@ -304,6 +324,15 @@
             "optional" : false,
             "isWorkflowNodeConfiguration" : false,
             "isReferenced" : false
+          }, {
+            "name" : "val_map_2",
+            "kind" : {
+              "type" : "string",
+              "value" : "val_map_2"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
           } ]
         },
         "instances" : {
@@ -313,7 +342,8 @@
             "mapping_table" : "table_mappings",
             "val_map_cat" : "dfinch",
             "val_map_sch" : "pad",
-            "val_map_table" : "validation_mapping"
+            "val_map_table" : "validation_mapping",
+            "val_map_2" : "val_map_2"
           }
         }
       }
@@ -351,40 +381,13 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "hLmcCxIYlhUTG_sedA0Ed$$TQiwjk-PZWKn2Aup79Lv0",
-    "source" : "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh",
-    "sourcePort" : "QDSCp8_1V7tzWhbSJHK9q$$rG3gcH2rWhOQ0bvITpqEa",
+    "id" : "UEeDorWrliibEciyiLb1C$$G8lS7ipb6n6BBV8lf-5Xc",
+    "source" : "DR7pfAalZ8jfa7409xGZ8$$mFf7qJD9zWHfbCwex4tFl",
+    "sourcePort" : "qQoYmeT0A2sijPa4EKjrg$$EB4O33rYs4lAKgwUoT5XD",
     "target" : "8VEQkIfKPRsNZxWCVz82B$$w-waCUJw8htgd3rGMMQap",
     "targetPort" : "ZlurQcCfUI_rksIbD-4P6$$0o6a-goFJNXEXTo9HfmdR"
   } ],
   "processes" : {
-    "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh" : {
-      "id" : "MN2-R_ZCPNPH1vKN810nC$$cvm-lK9Mto2EtC9BTyuzh",
-      "component" : "Source",
-      "metadata" : {
-        "label" : "validation_mapping",
-        "slug" : "validation_mapping",
-        "x" : 40,
-        "y" : 20,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false
-      },
-      "ports" : {
-        "inputs" : [ ],
-        "outputs" : [ {
-          "id" : "QDSCp8_1V7tzWhbSJHK9q$$rG3gcH2rWhOQ0bvITpqEa",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "datasetId" : "datasets/validation_mapping"
-      }
-    },
     "8VEQkIfKPRsNZxWCVz82B$$w-waCUJw8htgd3rGMMQap" : {
       "id" : "8VEQkIfKPRsNZxWCVz82B$$w-waCUJw8htgd3rGMMQap",
       "component" : "TableIterator",
@@ -410,7 +413,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The specific rule applied to validate data integrity and quality.",
+                "description" : "Specific rule identifier used for validating data integrity.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -419,7 +422,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The catalog name where the source data is stored.",
+                "description" : "Catalog name where the source data is stored.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -428,7 +431,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The schema name within the catalog that contains the source data.",
+                "description" : "Schema name within the catalog where the source data resides.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -437,7 +440,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The table name within the schema that holds the source data.",
+                "description" : "Table name in the source schema containing the data to be validated.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -446,7 +449,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "The specific column in the source table that is subject to validation.",
+                "description" : "Name of the column in the source table that is subject to validation.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -455,7 +458,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Category of validation rule applied to the data.",
+                "description" : "Category of rule applied for data validation or transformation.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -464,7 +467,7 @@
               "type" : "string",
               "nullable" : true,
               "metadata" : {
-                "description" : "Specific logic or condition used to validate the data in the column.",
+                "description" : "Conditional logic applied to validate or transform data in the specified column.",
                 "mappings" : [ ],
                 "tags" : [ ]
               }
@@ -480,7 +483,7 @@
       "properties" : {
         "metagemProperty" : {
           "availableColumnNames" : [ "validation", "source_catalog", "source_schema", "source_table", "column", "rule_type", "logic" ],
-          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "val_map_cat", "val_map_sch", "val_map_table", "validation", "source_catalog", "source_schema", "source_table", "column", "rule_type", "logic" ],
+          "availableConfigFieldNames" : [ "mapping_catalog", "mapping_schema", "mapping_table", "val_map_cat", "val_map_sch", "val_map_table", "val_map_2", "validation", "source_catalog", "source_schema", "source_table", "column", "rule_type", "logic" ],
           "numberOfThreads" : "5",
           "maxIteration" : "1000",
           "parallelismEnabled" : false,
@@ -598,7 +601,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "The specific rule applied to validate data integrity and quality.",
+                    "description" : "Specific rule identifier used for validating data integrity.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -607,7 +610,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "The catalog name where the source data is stored.",
+                    "description" : "Catalog name where the source data is stored.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -616,7 +619,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "The schema name within the catalog that contains the source data.",
+                    "description" : "Schema name within the catalog where the source data resides.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -625,7 +628,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "The table name within the schema that holds the source data.",
+                    "description" : "Table name in the source schema containing the data to be validated.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -634,7 +637,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "The specific column in the source table that is subject to validation.",
+                    "description" : "Name of the column in the source table that is subject to validation.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -643,7 +646,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Category of validation rule applied to the data.",
+                    "description" : "Category of rule applied for data validation or transformation.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -652,7 +655,7 @@
                   "type" : "string",
                   "nullable" : true,
                   "metadata" : {
-                    "description" : "Specific logic or condition used to validate the data in the column.",
+                    "description" : "Conditional logic applied to validate or transform data in the specified column.",
                     "mappings" : [ ],
                     "tags" : [ ]
                   }
@@ -747,6 +750,33 @@
       "componentInfo" : {
         "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/TableIterator",
         "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "DR7pfAalZ8jfa7409xGZ8$$mFf7qJD9zWHfbCwex4tFl" : {
+      "id" : "DR7pfAalZ8jfa7409xGZ8$$mFf7qJD9zWHfbCwex4tFl",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "val_map_2",
+        "slug" : "val_map_2",
+        "x" : 60,
+        "y" : 20,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "qQoYmeT0A2sijPa4EKjrg$$EB4O33rYs4lAKgwUoT5XD",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/val_map_2"
       }
     }
   },

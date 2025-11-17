@@ -1,0 +1,54 @@
+version: 1
+schema:
+  type: struct
+  fields:
+  - name: validation
+    type: string
+    nullable: true
+    metadata:
+      description: Specific rule identifier used for validating data integrity.
+      mappings: []
+      tags: []
+  - name: source_catalog
+    type: string
+    nullable: true
+    metadata:
+      description: Catalog name where the source data is stored.
+      mappings: []
+      tags: []
+  - name: source_schema
+    type: string
+    nullable: true
+    metadata:
+      description: Schema name within the catalog where the source data resides.
+      mappings: []
+      tags: []
+  - name: source_table
+    type: string
+    nullable: true
+    metadata:
+      description: Table name in the source schema containing the data to be validated.
+      mappings: []
+      tags: []
+  - name: column
+    type: string
+    nullable: true
+    metadata:
+      description: Name of the column in the source table that is subject to validation.
+      mappings: []
+      tags: []
+  - name: rule_type
+    type: string
+    nullable: true
+    metadata:
+      description: Category of rule applied for data validation or transformation.
+      mappings: []
+      tags: []
+  - name: logic
+    type: string
+    nullable: true
+    metadata:
+      description: Conditional logic applied to validate or transform data in the
+        specified column.
+      mappings: []
+      tags: []
