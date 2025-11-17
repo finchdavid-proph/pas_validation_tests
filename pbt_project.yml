@@ -6,11 +6,81 @@ language: python
 buildSystem: ''
 buildSystemDetails:
   artefactID: pasvalidationtests
-  parentArtefactID: ''
+  parentArtefactID: finchdavidprophecyioteam
   buildSystem: wheel
   author: null
   createdAt: '2025-11-17 06:53:23'
-pipelines: {}
+pipelines:
+  pipelines/validation_mask:
+    name: validation_mask
+    description: 'MASK: @Montoya, Jorge can add context to this objective. check for
+      distinct value violations, meaning check to see if the values are different
+      between bronze and silver (they should be as part of the masking process) And
+      distinct count mismatch, meanings checks to see if the distinct counts of those
+      values are different from bronze to silver (there are some filters applied that
+      are expected)'
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 06:58:35'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_sha256:
+    name: validation_sha256
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 07:03:09'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_keep:
+    name: validation_keep
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 07:03:20'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_supress:
+    name: validation_supress
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 07:03:32'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
+  pipelines/validation_map:
+    name: validation_map
+    description: ''
+    author: finch.david@prophecy.io
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2025-11-17 07:03:50'
+    datasets:
+      inputs: []
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets: {}
 templates: {}
 jobs: {}
