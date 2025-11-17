@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from .config import *
 from validation_keep.functions import *
 
-def silver_distinct_counts_1(spark: SparkSession, in0: DataFrame, in1: DataFrame) -> DataFrame:
+def silver_distinct_counts(spark: SparkSession, in0: DataFrame, in1: DataFrame) -> DataFrame:
     from pyspark.sql import functions as F, types as T
     # target columns
     target_cols = [r["col_name"] for r in in0.select("col_name").distinct().collect()]

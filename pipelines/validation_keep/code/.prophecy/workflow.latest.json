@@ -863,8 +863,8 @@
           "id" : "JOpKUo3Y70yhpw-s1Lmqa$$_gmSRo54vnAeu9DXxGB5d",
           "component" : "Join",
           "metadata" : {
-            "label" : "compare_distinct_counts_1",
-            "slug" : "compare_distinct_counts_1",
+            "label" : "join_columns_counts",
+            "slug" : "join_columns_counts",
             "x" : 1020,
             "y" : 320,
             "phase" : 0,
@@ -899,45 +899,45 @@
               "joinType" : "left_outer"
             } ],
             "expressions" : [ {
-              "_row_id" : "GUHJ1YYknq",
               "target" : "column_name",
               "expression" : {
                 "format" : "sql",
                 "expression" : "in0.column_name"
               },
-              "description" : ""
+              "description" : "",
+              "_row_id" : "GUHJ1YYknq"
             }, {
-              "_row_id" : "gPZj_Lt9Er",
               "target" : "bronze_exists",
               "expression" : {
                 "format" : "sql",
                 "expression" : "in0.bronze_exists"
               },
-              "description" : ""
+              "description" : "",
+              "_row_id" : "gPZj_Lt9Er"
             }, {
-              "_row_id" : "WKQ87vNc_e",
               "target" : "silver_exists",
               "expression" : {
                 "format" : "sql",
                 "expression" : "in0.silver_exists"
               },
-              "description" : ""
+              "description" : "",
+              "_row_id" : "WKQ87vNc_e"
             }, {
-              "_row_id" : "bKTwBKkHiy",
               "target" : "bronze_distinct_count",
               "expression" : {
                 "format" : "sql",
                 "expression" : "in0.bronze_distinct_count"
               },
-              "description" : ""
+              "description" : "",
+              "_row_id" : "bKTwBKkHiy"
             }, {
-              "_row_id" : "TUWlh2mcqW",
               "target" : "silver_distinct_count",
               "expression" : {
                 "format" : "sql",
                 "expression" : "in1.silver_distinct_count"
               },
-              "description" : ""
+              "description" : "",
+              "_row_id" : "TUWlh2mcqW"
             } ],
             "hints" : [ {
               "id" : "fHQBCac2IJcqyYBAKWorh$$netEsKFvNki-6oJawGoKb",
@@ -1003,8 +1003,8 @@
           "id" : "LF4IvducfciW5kkkFS1GJ$$2-UyOnLzZ5TEriSwNulCX",
           "component" : "Script",
           "metadata" : {
-            "label" : "silver_distinct_counts_1",
-            "slug" : "silver_distinct_counts_1",
+            "label" : "silver_distinct_counts",
+            "slug" : "silver_distinct_counts",
             "x" : 420,
             "y" : 620,
             "phase" : 0,
@@ -1235,8 +1235,8 @@
           "id" : "bNyjZk-Slj5VHacRf036p$$0JISjoUQenTW-ls4FeQqE",
           "component" : "SQLStatement",
           "metadata" : {
-            "label" : "silver_columns_1",
-            "slug" : "silver_columns_1",
+            "label" : "silver_get_columns",
+            "slug" : "silver_get_columns",
             "x" : 220,
             "y" : 420,
             "phase" : 0,
@@ -1276,8 +1276,8 @@
           "id" : "fm5huwV-8GxgW8_SfU20E$$i7CscXAoBGcGZtxAiAkbR",
           "component" : "Reformat",
           "metadata" : {
-            "label" : "reformat_bronze_path_1_1",
-            "slug" : "reformat_bronze_path_1_1",
+            "label" : "compile_keep_rule",
+            "slug" : "compile_keep_rule",
             "x" : 1420,
             "y" : 320,
             "phase" : 0,
@@ -1357,8 +1357,8 @@
           "id" : "1yUHIefGZ07LhuBDZCvgD$$Ci1B9O7kP9ZEvPj1bfsrL",
           "component" : "SQLStatement",
           "metadata" : {
-            "label" : "silver_rename_1",
-            "slug" : "silver_rename_1",
+            "label" : "silver_parse_columns",
+            "slug" : "silver_parse_columns",
             "x" : 420,
             "y" : 420,
             "phase" : 0,
@@ -1425,8 +1425,8 @@
           "id" : "bK9NNmwYYJCBlNCbTfWEv$$nLNlcyoeJfZrjXKf0lRLN",
           "component" : "Join",
           "metadata" : {
-            "label" : "join_bronze_silver_1",
-            "slug" : "join_bronze_silver_1",
+            "label" : "join_bronze_silver_columns",
+            "slug" : "join_bronze_silver_columns",
             "x" : 620,
             "y" : 320,
             "phase" : 0,
@@ -1528,8 +1528,8 @@
           "id" : "8iDhlSeLJBryODiHzQCyX$$pQVDtnEsdrOWxEmpFpCTZ",
           "component" : "SQLStatement",
           "metadata" : {
-            "label" : "bronze_columns_1",
-            "slug" : "bronze_columns_1",
+            "label" : "bronze_get_columns",
+            "slug" : "bronze_get_columns",
             "x" : 220,
             "y" : 220,
             "phase" : 0,
@@ -1596,8 +1596,8 @@
           "id" : "RuL8ngS4RcsytIL_ZkJly$$zcAzhq03GXJ4uKdDfMF-s",
           "component" : "Join",
           "metadata" : {
-            "label" : "inner_join_on_column_1",
-            "slug" : "inner_join_on_column_1",
+            "label" : "inner_join_columns_bronze_counts",
+            "slug" : "inner_join_columns_bronze_counts",
             "x" : 820,
             "y" : 200,
             "phase" : 0,
@@ -1635,7 +1635,7 @@
               "target" : "column_name",
               "expression" : {
                 "format" : "sql",
-                "expression" : "in0.column_name"
+                "expression" : "in1.column_name"
               },
               "description" : "",
               "_row_id" : "PRMTJNTUI4"
@@ -1643,7 +1643,7 @@
               "target" : "bronze_exists",
               "expression" : {
                 "format" : "sql",
-                "expression" : "in0.bronze_exists"
+                "expression" : "in1.bronze_exists"
               },
               "description" : "",
               "_row_id" : "C1Pho4_oW9"
@@ -1651,7 +1651,7 @@
               "target" : "silver_exists",
               "expression" : {
                 "format" : "sql",
-                "expression" : "in0.silver_exists"
+                "expression" : "in1.silver_exists"
               },
               "description" : "",
               "_row_id" : "nz8c2YN943"
@@ -1659,7 +1659,7 @@
               "target" : "bronze_distinct_count",
               "expression" : {
                 "format" : "sql",
-                "expression" : "in1.bronze_distinct_count"
+                "expression" : "in0.bronze_distinct_count"
               },
               "description" : "",
               "_row_id" : "aQrokVcDzH"
@@ -1691,8 +1691,8 @@
           "id" : "8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY",
           "component" : "Reformat",
           "metadata" : {
-            "label" : "output_keep_1",
-            "slug" : "output_keep_1",
+            "label" : "evaluate_keep_logic",
+            "slug" : "evaluate_keep_logic",
             "x" : 1220,
             "y" : 320,
             "phase" : 0,
@@ -1807,8 +1807,8 @@
           "id" : "-tgTYUVR1Zx779n1W5Jyi$$fxqNxkY_J_p98cDB3lfE-",
           "component" : "SQLStatement",
           "metadata" : {
-            "label" : "bronze_rename_1",
-            "slug" : "bronze_rename_1",
+            "label" : "bronze_parse_columns",
+            "slug" : "bronze_parse_columns",
             "x" : 420,
             "y" : 220,
             "phase" : 0,
@@ -1848,8 +1848,8 @@
           "id" : "i96p1oCcaovjHWvnAD630$$KVUiHgeuUeJj78lIPcCUm",
           "component" : "Script",
           "metadata" : {
-            "label" : "bronze_distinct_counts_1",
-            "slug" : "bronze_distinct_counts_1",
+            "label" : "bronze_distinct_counts",
+            "slug" : "bronze_distinct_counts",
             "x" : 420,
             "y" : 20,
             "phase" : 0,
@@ -2216,7 +2216,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Expressions]",
+    "message" : "No match found for column in1.column_name [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2232,7 +2232,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.bronze_exists [Expressions]",
+    "message" : "No match found for column in1.bronze_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2248,7 +2248,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.silver_exists [Expressions]",
+    "message" : "No match found for column in1.silver_exists [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2264,7 +2264,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.bronze_distinct_count [Expressions]",
+    "message" : "No match found for column in0.bronze_distinct_count [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2520,7 +2520,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_distinct_count",
+    "message" : "No match found for column bronze_exists",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2536,7 +2536,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists",
+    "message" : "No match found for column bronze_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

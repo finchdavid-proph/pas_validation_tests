@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from .config import *
 from validation_keep.functions import *
 
-def bronze_columns_1(spark: SparkSession, in0: DataFrame) -> (DataFrame):
+def bronze_get_columns(spark: SparkSession, in0: DataFrame) -> (DataFrame):
 
     try:
         registerUDFs(spark)

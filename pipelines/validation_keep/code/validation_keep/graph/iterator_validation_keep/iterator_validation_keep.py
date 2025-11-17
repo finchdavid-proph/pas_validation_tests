@@ -16,22 +16,30 @@ class iterator_validation_keep(MetaGemExec):
     def execute(self, spark: SparkSession, subgraph_config: SubgraphConfig) -> List[DataFrame]:
         Config.update(subgraph_config)
         df_source_bronze_table = source_bronze_table(spark)
-        df_bronze_columns_1 = bronze_columns_1(spark, df_source_bronze_table)
-        df_bronze_rename_1 = bronze_rename_1(spark, df_bronze_columns_1)
+        df_bronze_get_columns = bronze_get_columns(spark, df_source_bronze_table)
+        df_bronze_parse_columns = bronze_parse_columns(spark, df_bronze_get_columns)
         df_source_silver_table = source_silver_table(spark)
-        df_silver_columns_1 = silver_columns_1(spark, df_source_silver_table)
-        df_silver_rename_1 = silver_rename_1(spark, df_silver_columns_1)
-        df_join_bronze_silver_1 = join_bronze_silver_1(spark, df_bronze_rename_1, df_silver_rename_1)
-        df_bronze_distinct_counts_1 = bronze_distinct_counts_1(spark, df_source_bronze_table, df_bronze_columns_1)
-        df_inner_join_on_column_1 = inner_join_on_column_1(spark, df_bronze_distinct_counts_1, df_join_bronze_silver_1)
-        df_silver_distinct_counts_1 = silver_distinct_counts_1(spark, df_silver_columns_1, df_source_silver_table)
-        df_compare_distinct_counts_1 = compare_distinct_counts_1(
+        df_silver_get_columns = silver_get_columns(spark, df_source_silver_table)
+        df_silver_parse_columns = silver_parse_columns(spark, df_silver_get_columns)
+        df_join_bronze_silver_columns = join_bronze_silver_columns(
             spark, 
-            df_inner_join_on_column_1, 
-            df_silver_distinct_counts_1
+            df_bronze_parse_columns, 
+            df_silver_parse_columns
         )
-        df_output_keep_1 = output_keep_1(spark, df_compare_distinct_counts_1)
-        df_reformat_bronze_path_1_1 = reformat_bronze_path_1_1(spark, df_output_keep_1)
+        df_bronze_distinct_counts = bronze_distinct_counts(spark, df_source_bronze_table, df_bronze_get_columns)
+        df_inner_join_columns_bronze_counts = inner_join_columns_bronze_counts(
+            spark, 
+            df_bronze_distinct_counts, 
+            df_join_bronze_silver_columns
+        )
+        df_silver_distinct_counts = silver_distinct_counts(spark, df_silver_get_columns, df_source_silver_table)
+        df_join_columns_counts = join_columns_counts(
+            spark, 
+            df_inner_join_columns_bronze_counts, 
+            df_silver_distinct_counts
+        )
+        df_evaluate_keep_logic = evaluate_keep_logic(spark, df_join_columns_counts)
+        df_compile_keep_rule = compile_keep_rule(spark, df_evaluate_keep_logic)
         subgraph_config.update(Config)
 
     def apply(self, spark: SparkSession, in0: DataFrame, ) -> None:

@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from .config import *
 from validation_keep.functions import *
 
-def output_keep_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def evaluate_keep_logic(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
         lit("KEEP").alias("rule_type"), 
         lit(None).cast(StringType()).alias("sub_rule_type"), 

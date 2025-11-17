@@ -6,7 +6,7 @@ from prophecy.libs import typed_lit
 from .config import *
 from validation_keep.functions import *
 
-def reformat_bronze_path_1_1(spark: SparkSession, in0: DataFrame) -> DataFrame:
+def compile_keep_rule(spark: SparkSession, in0: DataFrame) -> DataFrame:
     return in0.select(
         col("bronze_table_name"), 
         col("silver_table_name"), 
