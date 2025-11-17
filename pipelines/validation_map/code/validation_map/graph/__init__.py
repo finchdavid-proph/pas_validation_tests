@@ -1,2 +1,2 @@
-from .iterator_validation_map import iterator_validation_map
+from .TableIterator_1 import TableIterator_1
 from .validation_mapping import validation_mapping

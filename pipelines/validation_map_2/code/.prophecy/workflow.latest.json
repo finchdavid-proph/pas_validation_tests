@@ -1,0 +1,589 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1",
+      "unitTestNullDataMigrated" : true
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.12.3",
+        "pyPiVersion" : "2.1.4"
+      },
+      "sparkConfigJinjaEnabled" : true,
+      "projectConfigurationEnabled" : true,
+      "workflowMode" : "batch"
+    },
+    "id" : "1",
+    "uri" : "pipelines/validation_map_2",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "validation_map_2",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true,
+      "isNullValuesInUnitTestsEnabled" : true,
+      "sparkConfigOptions" : {
+        "disableSparkCreationTimeConfigGeneration" : true
+      }
+    },
+    "language" : "python",
+    "fabricId" : "34673",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "finchdavidprophecyioteam.pasvalidationtests.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ {
+          "name" : "mapping_catalog",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_schema",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "mapping_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "table_mappings"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_cat",
+          "kind" : {
+            "type" : "string",
+            "value" : "dfinch"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_sch",
+          "kind" : {
+            "type" : "string",
+            "value" : "pad"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        }, {
+          "name" : "val_map_table",
+          "kind" : {
+            "type" : "string",
+            "value" : "validation_mapping"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false,
+          "isProjectConfig" : true
+        } ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false,
+      "projectConfig" : {
+        "common" : {
+          "type" : "record",
+          "fields" : [ {
+            "name" : "mapping_catalog",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_schema",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "mapping_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "table_mappings"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_cat",
+            "kind" : {
+              "type" : "string",
+              "value" : "dfinch"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_sch",
+            "kind" : {
+              "type" : "string",
+              "value" : "pad"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          }, {
+            "name" : "val_map_table",
+            "kind" : {
+              "type" : "string",
+              "value" : "validation_mapping"
+            },
+            "optional" : false,
+            "isWorkflowNodeConfiguration" : false,
+            "isReferenced" : false
+          } ]
+        },
+        "instances" : {
+          "default" : {
+            "mapping_catalog" : "dfinch",
+            "mapping_schema" : "pad",
+            "mapping_table" : "table_mappings",
+            "val_map_cat" : "dfinch",
+            "val_map_sch" : "pad",
+            "val_map_table" : "validation_mapping"
+          }
+        }
+      }
+    },
+    "sparkConf" : [ {
+      "name" : "spark.default.parallelism",
+      "value" : "4"
+    }, {
+      "name" : "spark.sql.legacy.allowUntypedScalaUDF",
+      "value" : "true"
+    } ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "12654",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "12655",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "validation_map_2",
+    "configTopLevelPackage" : "validation_map_2",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "uqRQNTj-NQ8p2nh6WflmH",
+    "source" : "4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo",
+    "sourcePort" : "lCVAlkzvWxgiSVesctPn0$$DXnpeHJUPWVGgt_NjIp5d",
+    "target" : "m-88nm1bBgopp1niPtpMd$$6KeVdPZiBB7rYDUyOdziZ",
+    "targetPort" : "xSngbfCTE62FooJ23fGPy$$gc85mFHLKn3vUFanWg2Bu"
+  }, {
+    "id" : "4sTtq_obfhjk51DiaDy68",
+    "source" : "4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo",
+    "sourcePort" : "lCVAlkzvWxgiSVesctPn0$$DXnpeHJUPWVGgt_NjIp5d",
+    "target" : "bcs0Q0Z9FzT2LtWra-rPm$$VOOpT2lglalVaTx0gOlIu",
+    "targetPort" : "8C22O0vZ3bskZh461MExk$$cSpFgJCsPtJ3A8SRJ4D9C"
+  }, {
+    "id" : "Yj7I7tNraBzQwssizETYY",
+    "source" : "4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo",
+    "sourcePort" : "lCVAlkzvWxgiSVesctPn0$$DXnpeHJUPWVGgt_NjIp5d",
+    "target" : "rYVO0BX8eNkQU-XchxVKC$$o0NhxsfMomhaODYHYFpF-",
+    "targetPort" : "ASp9pLWYgTZTYakeWQE_y$$y_77ZOlaqaaoLrwi04fA1"
+  } ],
+  "processes" : {
+    "m-88nm1bBgopp1niPtpMd$$6KeVdPZiBB7rYDUyOdziZ" : {
+      "id" : "m-88nm1bBgopp1niPtpMd$$6KeVdPZiBB7rYDUyOdziZ",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "postal_code_validation_status",
+        "slug" : "postal_code_validation_status",
+        "x" : 320,
+        "y" : 120,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "xSngbfCTE62FooJ23fGPy$$gc85mFHLKn3vUFanWg2Bu",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "b2LI0oXlqwJJUymPZip-S$$KvKIIN1WfQfgh7xuzf5mK",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "rule_status",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CASE WHEN SUM(CASE WHEN POSTAL_CODE IS NULL THEN 1 ELSE 0 END) = COUNT(*) THEN 'FAILED - NULL' WHEN SUM(CASE WHEN POSTAL_CODE IN ('036', '059','090','091','092','093','094','095','096','097','098','099', '102','202','203','204','205','340','369','556','692','753','772','821', '823','878','879','884','893','962','963','964','965','966','987') THEN 1 ELSE 0 END) = 0 THEN 'PASSED' ELSE 'FAILED' END"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"sample_data_clinical_patient\""
+          },
+          "description" : ""
+        }, {
+          "target" : "column",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"postal_code\""
+          },
+          "description" : ""
+        }, {
+          "target" : "rule_type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"mapping\""
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "bcs0Q0Z9FzT2LtWra-rPm$$VOOpT2lglalVaTx0gOlIu" : {
+      "id" : "bcs0Q0Z9FzT2LtWra-rPm$$VOOpT2lglalVaTx0gOlIu",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "postal_code_validation_status_1",
+        "slug" : "postal_code_validation_status_1",
+        "x" : 320,
+        "y" : 320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "8C22O0vZ3bskZh461MExk$$cSpFgJCsPtJ3A8SRJ4D9C",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "n4bNmZfRqr9X2PyXSMnQ4$$i6n9UXQ8iog32_u_ivOKt",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "rule_status",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CASE WHEN SUM(CASE WHEN BIRTH_DATETIME IS NULL THEN 1 ELSE 0 END) = COUNT(*) THEN 'FAILED - NULL' WHEN SUM(CASE WHEN BIRTH_DATETIME IS NOT NULL AND BIRTH_DATETIME < CURRENT_DATE() - INTERVAL 89 YEARS THEN 1 ELSE 0 END) = 0 THEN 'PASSED' ELSE 'FAILED' END"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"sample_data_clinical_patient\""
+          },
+          "description" : ""
+        }, {
+          "target" : "column",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"birth_datetime\""
+          },
+          "description" : ""
+        }, {
+          "target" : "rule_type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"mapping\""
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "rYVO0BX8eNkQU-XchxVKC$$o0NhxsfMomhaODYHYFpF-" : {
+      "id" : "rYVO0BX8eNkQU-XchxVKC$$o0NhxsfMomhaODYHYFpF-",
+      "component" : "Reformat",
+      "metadata" : {
+        "label" : "postal_code_validation_status_2",
+        "slug" : "postal_code_validation_status_2",
+        "x" : 320,
+        "y" : 520,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "dataPreview" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ASp9pLWYgTZTYakeWQE_y$$y_77ZOlaqaaoLrwi04fA1",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "xi1NteRuTQ_qhyyKVeAwN$$4JA2eExYDD_It3wyvA6_s",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+        "expressions" : [ {
+          "target" : "rule_status",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "CASE WHEN SUM(CASE WHEN STD_ADMINISTRATIVE_SEX_CODE IS NULL THEN 1 ELSE 0 END) = COUNT(*) THEN 'FAILED - NULL' WHEN SUM(CASE WHEN STD_ADMINISTRATIVE_SEX_CODE IS NOT NULL AND STD_ADMINISTRATIVE_SEX_CODE NOT IN ('F', 'M', 'U') THEN 1 ELSE 0 END) = 0 THEN 'PASSED' ELSE 'FAILED' END"
+          },
+          "description" : ""
+        }, {
+          "target" : "source_table",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"sample_data_clinical_patient\""
+          },
+          "description" : ""
+        }, {
+          "target" : "column",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"std_administrative_sex_code\""
+          },
+          "description" : ""
+        }, {
+          "target" : "rule_type",
+          "expression" : {
+            "format" : "sql",
+            "expression" : "\"mapping\""
+          },
+          "description" : ""
+        } ],
+        "importString" : "",
+        "activeTab" : "expressions",
+        "columnsSelector" : [ ]
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo" : {
+      "id" : "4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "clinical_patient",
+        "slug" : "clinical_patient",
+        "x" : 120,
+        "y" : 320,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "lCVAlkzvWxgiSVesctPn0$$DXnpeHJUPWVGgt_NjIp5d",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/clinical_patient"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.4T_PrODzK9yGLpaP_Njhq$$kI7-Usc8HM7XMO-NfyAmo.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.m-88nm1bBgopp1niPtpMd$$6KeVdPZiBB7rYDUyOdziZ",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.m-88nm1bBgopp1niPtpMd$$6KeVdPZiBB7rYDUyOdziZ.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column POSTAL_CODE",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.bcs0Q0Z9FzT2LtWra-rPm$$VOOpT2lglalVaTx0gOlIu",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.bcs0Q0Z9FzT2LtWra-rPm$$VOOpT2lglalVaTx0gOlIu.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column BIRTH_DATETIME",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYVO0BX8eNkQU-XchxVKC$$o0NhxsfMomhaODYHYFpF-",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.rYVO0BX8eNkQU-XchxVKC$$o0NhxsfMomhaODYHYFpF-.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column STD_ADMINISTRATIVE_SEX_CODE",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}

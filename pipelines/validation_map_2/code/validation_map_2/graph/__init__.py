@@ -1,0 +1,4 @@
+from .postal_code_validation_status import postal_code_validation_status
+from .clinical_patient import clinical_patient
+from .postal_code_validation_status_2 import postal_code_validation_status_2
+from .postal_code_validation_status_1 import postal_code_validation_status_1

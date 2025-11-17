@@ -6,49 +6,48 @@ schema:
     type: string
     nullable: true
     metadata:
-      description: Criteria or checks applied to ensure data integrity and accuracy.
+      description: The specific rule applied to validate data integrity and quality.
       mappings: []
       tags: []
   - name: source_catalog
     type: string
     nullable: true
     metadata:
-      description: Name of the catalog where the data originates.
+      description: The catalog name where the source data is stored.
       mappings: []
       tags: []
   - name: source_schema
     type: string
     nullable: true
     metadata:
-      description: Schema within the catalog that contains the data source.
+      description: The schema name within the catalog that contains the source data.
       mappings: []
       tags: []
   - name: source_table
     type: string
     nullable: true
     metadata:
-      description: Table from which the data is sourced.
+      description: The table name within the schema that holds the source data.
       mappings: []
       tags: []
   - name: column
     type: string
     nullable: true
     metadata:
-      description: Specific column in the source table to which the rule applies.
+      description: The specific column in the source table that is subject to validation.
       mappings: []
       tags: []
   - name: rule_type
     type: string
     nullable: true
     metadata:
-      description: Category of the rule applied; Defines the type of rule being implemented.
+      description: Category of validation rule applied to the data.
       mappings: []
       tags: []
   - name: logic
     type: string
     nullable: true
     metadata:
-      description: Specific logic or condition applied within the rule; Details the
-        criteria or formula used.
+      description: Specific logic or condition used to validate the data in the column.
       mappings: []
       tags: []

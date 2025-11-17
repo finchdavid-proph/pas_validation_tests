@@ -2327,7 +2327,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.bronze_col_name [Conditions]",
+    "message" : "No match found for column in1.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2343,23 +2343,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.silver_col_name [Conditions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.bK9NNmwYYJCBlNCbTfWEv$$nLNlcyoeJfZrjXKf0lRLN.properties.expressions[0].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "No match found for column in0.bronze_col_name [Expressions]",
+    "message" : "No match found for column in0.bronze_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2376,6 +2360,22 @@
     },
     "severity" : 2,
     "message" : "No match found for column in1.silver_col_name [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.bK9NNmwYYJCBlNCbTfWEv$$nLNlcyoeJfZrjXKf0lRLN.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.bronze_col_name [Expressions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2455,7 +2455,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2471,7 +2471,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2583,7 +2583,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.column_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2599,7 +2599,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2791,22 +2791,6 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column silver_exists",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
     "message" : "No match found for column silver_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
@@ -2823,7 +2807,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_distinct_count",
+    "message" : "No match found for column bronze_exists",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2839,7 +2823,23 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists",
+    "message" : "No match found for column silver_exists",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.8t5RHi1c1ZcUMJ4umvwX5$$r5dYvOo3v2Dt-hIoQbyVY.properties.expressions[9].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column bronze_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {

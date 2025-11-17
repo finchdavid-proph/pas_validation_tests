@@ -8,7 +8,7 @@ from validation_map.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_validation_mapping = validation_mapping(spark)
-    iterator_validation_map(Config.iterator_validation_map).apply(spark)
+    TableIterator_1(Config.TableIterator_1).apply(spark, df_validation_mapping)
 
 def main():
     spark = SparkSession.builder.enableHiveSupport().appName("validation_map").getOrCreate()

@@ -7,7 +7,7 @@ from . import *
 from .config import *
 
 
-class iterator_validation_map(MetaGemExec):
+class TableIterator_1(MetaGemExec):
 
     def __init__(self, config):
         self.config = config
@@ -15,13 +15,15 @@ class iterator_validation_map(MetaGemExec):
 
     def execute(self, spark: SparkSession, subgraph_config: SubgraphConfig) -> List[DataFrame]:
         Config.update(subgraph_config)
+        df_source_map_1 = source_map_1(spark)
+        df_apply_custom_logic = apply_custom_logic(spark, df_source_map_1)
         subgraph_config.update(Config)
 
     def apply(self, spark: SparkSession, in0: DataFrame, ) -> None:
         inDFs = []
         results = []
         conf_to_column = dict(
-            [("bronze_catalog", "bronze_catalog"),  ("bronze_schema", "bronze_schema"),  ("bronze_table", "bronze_table"),              ("bronze_path", "bronze_path"),  ("silver_catalog", "silver_catalog"),              ("silver_schema", "silver_schema"),  ("silver_table", "silver_table"),              ("silver_path", "silver_path"),  ("suppress_columns", "suppress_columns"),  ("keep", "keep"),              ("supress", "supress"),  ("map", "map"),  ("sha256", "sha256"),  ("mask", "mask")]
+            [("validation", "validation"),  ("source_catalog", "source_catalog"),  ("source_schema", "source_schema"),              ("source_table", "source_table"),  ("column", "column"),  ("rule_type", "rule_type"),              ("logic", "logic")]
         )
 
         if in0.count() > 1000:
