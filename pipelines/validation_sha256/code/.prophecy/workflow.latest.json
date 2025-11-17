@@ -1784,8 +1784,8 @@
         "character" : 0
       }
     },
-    "severity" : 1,
-    "message" : "Gems inside the subgraph are broken",
+    "severity" : 2,
+    "message" : "Gems inside the subgraph have warning",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1897,7 +1897,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in1.column_name [Conditions]",
+    "message" : "No match found for column in0.silver_col_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -1913,7 +1913,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column in0.silver_col_name [Conditions]",
+    "message" : "No match found for column in1.column_name [Conditions]",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2074,22 +2074,6 @@
     },
     "severity" : 2,
     "message" : "No match found for column in1.bronze_col_name [Expressions]",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.zFmgtxsiRDlerw09_8qM6$$-O-hUetkjsd__N5aPF1t_.processes.mRR7_4TIPhhVMO4am8SlA$$FDGiKkQqK_a8hY-FRh_oQ",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 1,
-    "message" : "ControlFlowOutput Error:: Error occurred while doing Schema Analysis: 'bronze_sha256_columns'",
     "tags" : [ ],
     "relatedInformation" : [ ]
   } ]
