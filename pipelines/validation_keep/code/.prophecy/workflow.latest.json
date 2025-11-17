@@ -1316,6 +1316,13 @@
               },
               "description" : ""
             }, {
+              "target" : "column_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "column_name"
+              },
+              "description" : ""
+            }, {
               "target" : "rule_type",
               "expression" : {
                 "format" : "sql",
@@ -2520,7 +2527,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_distinct_count",
+    "message" : "No match found for column bronze_exists",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2536,7 +2543,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists",
+    "message" : "No match found for column bronze_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2632,7 +2639,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column rule_type",
+    "message" : "No match found for column column_name",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2648,7 +2655,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column sub_rule_type",
+    "message" : "No match found for column rule_type",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2664,11 +2671,27 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column rule_status",
+    "message" : "No match found for column sub_rule_type",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
     "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.fm5huwV-8GxgW8_SfU20E$$i7CscXAoBGcGZtxAiAkbR.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column rule_status",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.e8hRjNxUIaJWeG0NpefVK$$nVsLFew1xKGGr_gdpopRE.processes.fm5huwV-8GxgW8_SfU20E$$i7CscXAoBGcGZtxAiAkbR.properties.expressions[6].expression.expression",
     "range" : {
       "start" : {
         "line" : 0,

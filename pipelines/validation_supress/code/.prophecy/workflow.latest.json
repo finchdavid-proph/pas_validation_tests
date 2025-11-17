@@ -761,6 +761,66 @@
         "visualProperty" : {
           "isHidden" : true
         }
+      }, {
+        "id" : "li_kp9s7ZCe3Gm1N_xgYl",
+        "source" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
+        "sourcePort" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
+        "target" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
+        "targetPort" : "7Ajkux-xQjJFxDObN6-M-$$HZH3dQhUyRGCj12cSr4CJ"
+      }, {
+        "id" : "GnixTXsTvzI4UB60rD4f0",
+        "source" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
+        "sourcePort" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
+        "target" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
+        "targetPort" : "LwkN9oKDeB-KKRDP7TYKJ$$EcP-AJctKTXrI6ozbvq73"
+      }, {
+        "id" : "3mJx06h85NB-1CZ2Q90at",
+        "source" : "_2J0v3mArmFePJLERvE8h$$PrBbh2c8sFqLMx-nRgY6O",
+        "sourcePort" : "c0-sltVEtBdiO5cF5f7KC$$l0qaJd7RDjKHKP3H463Eh",
+        "target" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
+        "targetPort" : "XkHE1056QFieJACxjSGZ6$$oZ5c_QCjGxoMVMZiUiWu6"
+      }, {
+        "id" : "csuI4mxIY96-s82pYM0fN",
+        "source" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
+        "sourcePort" : "0GuwFzpz88AnhRkCIaJO8$$lnM92ofejFleXc69iG-qW",
+        "target" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
+        "targetPort" : "JG1aTmiQ3gJnuq2p_QpYO$$P6tn_Zi_55ABNisTStjAh"
+      }, {
+        "id" : "kcBbtnBNuPsokoMO0rMqU",
+        "source" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
+        "sourcePort" : "L0-5GMWJhgE-DhCSI2iWL$$HpoY-G8PnGANR0pHFLgP7",
+        "target" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
+        "targetPort" : "1UbE8no_qodqNv1ff6_Yb$$uXjhDfO56yjgLIvapjbP4"
+      }, {
+        "id" : "tjbKTav07NXFS5LRzFshX",
+        "source" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+        "sourcePort" : "1MrqCVzbLlDYQLACYA3zZ$$A509xY2K6IUzkOmgJ7YgG",
+        "target" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+        "targetPort" : "6WCH6ii-wrtIbC8zvEb7r$$YlLIyVz9APWyoz0w3zVsM"
+      }, {
+        "id" : "nTa2MF7sDL7fW8iOpRETK",
+        "source" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+        "sourcePort" : "dk8Nche_4TKgurH0Se6lg$$FfVO4pVK1AhJ_DMRxC001",
+        "target" : "JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD",
+        "targetPort" : "1le6dO8nxp5f3xqNNeHFN$$iHA_DMwVSUjJfOylj5zrB"
+      }, {
+        "id" : "XvRmHtzNGFNceDcrwkkPT",
+        "source" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
+        "sourcePort" : "5vIj1JspNGgD3ze5YilzF$$T80Z5lhb3x8UPk09NJTc9",
+        "target" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+        "targetPort" : "NeTdPw6IZvZIvUkpZioWF$$Ana5Xclre5A84CRN93Gcw"
+      }, {
+        "id" : "jrLVTS7stdew0ck0t2GYB",
+        "source" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
+        "sourcePort" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
+        "target" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+        "targetPort" : "Y21GID2wlMh1542ybFVfu$$2zurpJmwc2jskZfZL5AbZ"
+      }, {
+        "id" : "yPL6zBQbcVrNPYoa3Q1vW",
+        "source" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
+        "sourcePort" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
+        "target" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+        "targetPort" : "0l64dxVH8khCbPcPOOwKr$$EYhmUKsT9-oSJ-Ar2SvcH"
       } ],
       "processes" : {
         "ig09Ddyg_5NrT2WSv74ea$$WqQeKSEIruEMXEe-T9mMG" : {
@@ -938,6 +998,229 @@
             "projectName" : "ProphecySparkBasicsPython"
           }
         },
+        "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp" : {
+          "id" : "WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "compare_suppress_1",
+            "slug" : "compare_suppress_1",
+            "x" : 920,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "6WCH6ii-wrtIbC8zvEb7r$$YlLIyVz9APWyoz0w3zVsM",
+              "slug" : "in0"
+            }, {
+              "id" : "0l64dxVH8khCbPcPOOwKr$$EYhmUKsT9-oSJ-Ar2SvcH",
+              "slug" : "in1"
+            } ],
+            "outputs" : [ {
+              "id" : "dk8Nche_4TKgurH0Se6lg$$FfVO4pVK1AhJ_DMRxC001",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "in1",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.bronze_column_name = in1.silver_col_name"
+              },
+              "joinType" : "left_outer"
+            } ],
+            "expressions" : [ {
+              "_row_id" : "mX3Z1yhLpo",
+              "target" : "column_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in0.bronze_column_name"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "7ylLwK6BTi",
+              "target" : "bronze_exists",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "True"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "ibWNqyDnaH",
+              "target" : "silver_exists",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in1.silver_col_name IS NOT NULL"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "TRDS8_R3mx",
+              "target" : "rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'SUPPRESS'"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "83BRsEhHC6",
+              "target" : "sub_rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "CAST(NULL AS STRING)"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "xYyUC0Jwgc",
+              "target" : "bronze_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{bronze_path}}'"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "0n-I8IxGRp",
+              "target" : "silver_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "'{{silver_path}}'"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "rbTjSjiKxg",
+              "target" : "rule_status",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "(bronze_exists AND NOT silver_exists)"
+              },
+              "description" : ""
+            }, {
+              "_row_id" : "mHwPh2Mig7",
+              "target" : "validation_timestamp",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "current_timestamp()"
+              },
+              "description" : ""
+            } ],
+            "hints" : [ {
+              "id" : "6WCH6ii-wrtIbC8zvEb7r$$YlLIyVz9APWyoz0w3zVsM",
+              "alias" : "in0",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "0l64dxVH8khCbPcPOOwKr$$EYhmUKsT9-oSJ-Ar2SvcH",
+              "alias" : "in1",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "allIn1" : null,
+            "activeTab" : "conditions",
+            "columnsSelector" : [ ],
+            "allIn0" : null,
+            "whereClause" : null,
+            "headAlias" : "in0"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD" : {
+          "id" : "JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD",
+          "component" : "Reformat",
+          "metadata" : {
+            "label" : "reformat_bronze_path_2",
+            "slug" : "reformat_bronze_path_2",
+            "x" : 1120,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "1le6dO8nxp5f3xqNNeHFN$$iHA_DMwVSUjJfOylj5zrB",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "T8OQKfktq-6aFzUANobD7$$oJ9A2qxl61yXkku6xRCDH",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "importLanguage" : "${$.workflow.metainfo.frontEndLanguage}",
+            "expressions" : [ {
+              "target" : "bronze_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "bronze_table_name"
+              },
+              "description" : ""
+            }, {
+              "target" : "silver_table_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "silver_table_name"
+              },
+              "description" : ""
+            }, {
+              "target" : "column_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "column_name"
+              },
+              "description" : ""
+            }, {
+              "target" : "rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "rule_type"
+              },
+              "description" : ""
+            }, {
+              "target" : "sub_rule_type",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "sub_rule_type"
+              },
+              "description" : ""
+            }, {
+              "target" : "rule_status",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "rule_status"
+              },
+              "description" : ""
+            }, {
+              "target" : "validation_timestamp",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "validation_timestamp"
+              },
+              "description" : ""
+            } ],
+            "importString" : "",
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Reformat",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
         "mNaVtTqpOJYkiX_gU2cp4$$AGBg4jvG608LehLRl4gV5" : {
           "id" : "mNaVtTqpOJYkiX_gU2cp4$$AGBg4jvG608LehLRl4gV5",
           "component" : "ControlFlowOutput",
@@ -974,6 +1257,336 @@
             "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/ControlFlowOutput",
             "projectName" : "ProphecySparkBasicsPython"
           }
+        },
+        "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW" : {
+          "id" : "DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
+          "component" : "SQLStatement",
+          "metadata" : {
+            "label" : "bronze_get_columns",
+            "slug" : "bronze_get_columns",
+            "x" : 320,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "LwkN9oKDeB-KKRDP7TYKJ$$EcP-AJctKTXrI6ozbvq73",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "L0-5GMWJhgE-DhCSI2iWL$$HpoY-G8PnGANR0pHFLgP7",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "fileTabs" : [ {
+              "path" : "out",
+              "id" : "L0-5GMWJhgE-DhCSI2iWL$$HpoY-G8PnGANR0pHFLgP7",
+              "language" : "sql",
+              "content" : "SHOW COLUMNS IN {{bronze_path}}"
+            } ],
+            "inputPortNames" : [ "in0" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5" : {
+          "id" : "Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_bronze_table",
+            "slug" : "source_bronze_table",
+            "x" : 120,
+            "y" : 220,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "srB-NRFRiJfKSKMP00Ub8$$P5gQgigLgMncgMDdFeLgM",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/source_bronze_supress"
+          }
+        },
+        "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf" : {
+          "id" : "dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
+          "component" : "SQLStatement",
+          "metadata" : {
+            "label" : "extract_suppressed_columns_1",
+            "slug" : "extract_suppressed_columns_1",
+            "x" : 520,
+            "y" : 120,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "7Ajkux-xQjJFxDObN6-M-$$HZH3dQhUyRGCj12cSr4CJ",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "5vIj1JspNGgD3ze5YilzF$$T80Z5lhb3x8UPk09NJTc9",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "fileTabs" : [ {
+              "path" : "out",
+              "id" : "5vIj1JspNGgD3ze5YilzF$$T80Z5lhb3x8UPk09NJTc9",
+              "language" : "sql",
+              "content" : "SELECT explode(from_json(\"{{suppress_columns}}\", 'array<string>')) AS column_name"
+            } ],
+            "inputPortNames" : [ "in0" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU" : {
+          "id" : "gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
+          "component" : "SQLStatement",
+          "metadata" : {
+            "label" : "silver_get_columns",
+            "slug" : "silver_get_columns",
+            "x" : 320,
+            "y" : 520,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "XkHE1056QFieJACxjSGZ6$$oZ5c_QCjGxoMVMZiUiWu6",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "0GuwFzpz88AnhRkCIaJO8$$lnM92ofejFleXc69iG-qW",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "fileTabs" : [ {
+              "path" : "out",
+              "id" : "0GuwFzpz88AnhRkCIaJO8$$lnM92ofejFleXc69iG-qW",
+              "language" : "sql",
+              "content" : "SHOW COLUMNS IN {{silver_path}}\n"
+            } ],
+            "inputPortNames" : [ "in0" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9" : {
+          "id" : "aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+          "component" : "Join",
+          "metadata" : {
+            "label" : "inner_join_suppress_1",
+            "slug" : "inner_join_suppress_1",
+            "x" : 720,
+            "y" : 220,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "NeTdPw6IZvZIvUkpZioWF$$Ana5Xclre5A84CRN93Gcw",
+              "slug" : "in0"
+            }, {
+              "id" : "Y21GID2wlMh1542ybFVfu$$2zurpJmwc2jskZfZL5AbZ",
+              "slug" : "in1"
+            } ],
+            "outputs" : [ {
+              "id" : "1MrqCVzbLlDYQLACYA3zZ$$A509xY2K6IUzkOmgJ7YgG",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "conditions" : [ {
+              "alias" : "in1",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in1.bronze_col_name = in0.column_name"
+              },
+              "joinType" : "inner"
+            } ],
+            "expressions" : [ {
+              "target" : "bronze_column_name",
+              "expression" : {
+                "format" : "sql",
+                "expression" : "in1.bronze_col_name"
+              },
+              "description" : "",
+              "_row_id" : "qFKlN2hagv"
+            } ],
+            "hints" : [ {
+              "id" : "NeTdPw6IZvZIvUkpZioWF$$Ana5Xclre5A84CRN93Gcw",
+              "alias" : "in0",
+              "hintType" : "none",
+              "propagateColumns" : false
+            }, {
+              "id" : "Y21GID2wlMh1542ybFVfu$$2zurpJmwc2jskZfZL5AbZ",
+              "alias" : "in1",
+              "hintType" : "none",
+              "propagateColumns" : false
+            } ],
+            "allIn1" : null,
+            "activeTab" : "expressions",
+            "columnsSelector" : [ ],
+            "allIn0" : null,
+            "whereClause" : null,
+            "headAlias" : "in0"
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/Join",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "_2J0v3mArmFePJLERvE8h$$PrBbh2c8sFqLMx-nRgY6O" : {
+          "id" : "_2J0v3mArmFePJLERvE8h$$PrBbh2c8sFqLMx-nRgY6O",
+          "component" : "Source",
+          "metadata" : {
+            "label" : "source_silver_table",
+            "slug" : "source_silver_table",
+            "x" : 120,
+            "y" : 520,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false
+          },
+          "ports" : {
+            "inputs" : [ ],
+            "outputs" : [ {
+              "id" : "c0-sltVEtBdiO5cF5f7KC$$l0qaJd7RDjKHKP3H463Eh",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "datasetId" : "datasets/source_silver_supress"
+          }
+        },
+        "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS" : {
+          "id" : "trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
+          "component" : "SQLStatement",
+          "metadata" : {
+            "label" : "silver_parse_columns",
+            "slug" : "silver_parse_columns",
+            "x" : 520,
+            "y" : 520,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "JG1aTmiQ3gJnuq2p_QpYO$$P6tn_Zi_55ABNisTStjAh",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "fileTabs" : [ {
+              "path" : "out",
+              "id" : "yQGsqQ0HMdgaWoOW-hSn4$$-w5b-ANvEMd9hhclFdycN",
+              "language" : "sql",
+              "content" : "SELECT col_name AS silver_col_name FROM in0"
+            } ],
+            "inputPortNames" : [ "in0" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
+        },
+        "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze" : {
+          "id" : "TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
+          "component" : "SQLStatement",
+          "metadata" : {
+            "label" : "bronze_parse_columns",
+            "slug" : "bronze_parse_columns",
+            "x" : 520,
+            "y" : 320,
+            "phase" : 0,
+            "cache" : false,
+            "detailedStats" : false,
+            "isImported" : false,
+            "dataPreview" : false
+          },
+          "ports" : {
+            "inputs" : [ {
+              "id" : "1UbE8no_qodqNv1ff6_Yb$$uXjhDfO56yjgLIvapjbP4",
+              "slug" : "in0"
+            } ],
+            "outputs" : [ {
+              "id" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
+              "slug" : "out"
+            } ],
+            "selectedInputFields" : [ ],
+            "isCustomOutputSchema" : false,
+            "autoUpdateOnRun" : false
+          },
+          "properties" : {
+            "fileTabs" : [ {
+              "path" : "out",
+              "id" : "FBPQ5FjFrPOpEd40v9htK$$QMMUtf7gVqWrGjqbJFVLD",
+              "language" : "sql",
+              "content" : "SELECT col_name AS bronze_col_name FROM in0"
+            } ],
+            "inputPortNames" : [ "in0" ]
+          },
+          "componentInfo" : {
+            "gemId" : "gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=&tag=0.2.49&projectSubscriptionProjectId=12654&path=gems/SQLStatement",
+            "projectName" : "ProphecySparkBasicsPython"
+          }
         }
       },
       "componentInfo" : {
@@ -988,5 +1601,438 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  }
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Gems inside the subgraph have warning",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.Oep_rJEmpv8amNhjHJ77D$$51lylukTzRlWfqG7pfba5.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.dfXOAfz4uoEpntpqjjbXK$$cfbGG2Rdq9ZhKuo7DT3vf",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.DzRTgaNC61MhuBMzubZUu$$Glmhual5YnUt78_WbF0kW",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.TqivNgbQeBo3AJRUb8xgj$$JfL5M81XzQdT7jKvtrsze",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in1.bronze_col_name [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.column_name [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.aJxhaOk8suG0Rn488TcvV$$648H-qKDwlPzo7Vs7HNq9.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in1.bronze_col_name [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes._2J0v3mArmFePJLERvE8h$$PrBbh2c8sFqLMx-nRgY6O.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.gguihkehWa8pH3vBI4_aN$$D9n3b1WAHoqAyHeGvkiFU",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.trX7GRzW5hcg1KSa2Ioja$$6Tbn7zy-b6AUogGq8kZIS",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in1.silver_col_name [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.conditions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.bronze_column_name [Conditions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in0.bronze_column_name [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column in1.silver_col_name [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column bronze_exists [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.WGdKXVOoj8Q2QEaka4x7b$$ZUpU6R7fLxe6JMYz8zvtp.properties.expressions[7].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column silver_exists [Expressions]",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[0].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column bronze_table_name",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[1].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column silver_table_name",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[2].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column column_name",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[3].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column rule_type",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[4].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column sub_rule_type",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[5].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column rule_status",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.s7FqIDAz-sF8a-dq_qlPp$$gzwzNV2Yo_QgXVJ6OYYHV.processes.JST5snWITAllxv5CMbUmn$$VqOHd39BriuOg9YCEyfhD.properties.expressions[6].expression.expression",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "No match found for column validation_timestamp",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
 }
