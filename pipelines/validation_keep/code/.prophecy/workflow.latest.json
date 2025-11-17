@@ -2520,7 +2520,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_exists",
+    "message" : "No match found for column bronze_distinct_count",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
@@ -2536,7 +2536,7 @@
       }
     },
     "severity" : 2,
-    "message" : "No match found for column bronze_distinct_count",
+    "message" : "No match found for column bronze_exists",
     "tags" : [ ],
     "relatedInformation" : [ ]
   }, {
